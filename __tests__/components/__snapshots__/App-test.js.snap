@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div>
+  <div
+    className="StyledGrommet__StyledGrommet-jDZKti bmtWHe"
+  >
+    <h1>
+      Basic Theme
+    </h1>
+    <button
+      aria-label={undefined}
+      className="sc-bdVaJa kreBCK"
+      disabled={false}
+      href={undefined}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+      type="button"
+    >
+      <span
+        className="StyledButton__StyledLabel-cdfjly iYzZdi"
+      >
+        hi
+      </span>
+    </button>
+  </div>
+  <div
+    className="StyledGrommet__StyledGrommet-jDZKti cqaqZU"
+  >
+    <h1>
+      HPE Theme
+    </h1>
+    <button
+      aria-label={undefined}
+      className="sc-bdVaJa bXcFiN"
+      disabled={false}
+      href={undefined}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+      type="button"
+    >
+      <span
+        className="StyledButton__StyledLabel-cdfjly iYzZdi"
+      >
+        hi
+      </span>
+    </button>
+  </div>
+</div>
+`;
