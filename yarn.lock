@@ -3752,11 +3752,10 @@ node-dir@^0.1.10:
     minimatch "^3.0.2"
 
 node-emoji@^1.4.3:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.7.0.tgz#a400490aac409b616d13941532200f128af037f9"
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.8.0.tgz#7add104f22e84dd8cf3b244107cacd7ef101ee79"
   dependencies:
     lodash.toarray "^4.4.0"
-    string.prototype.codepointat "^0.2.0"
 
 node-fetch@^1.0.1:
   version "1.7.1"
@@ -4898,10 +4897,6 @@ string-width@^2.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
-
-string.prototype.codepointat@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/string.prototype.codepointat/-/string.prototype.codepointat-0.2.0.tgz#6b26e9bd3afcaa7be3b4269b526de1b82000ac78"
 
 string_decoder@^0.10.25:
   version "0.10.31"
