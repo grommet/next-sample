@@ -32,7 +32,7 @@ export default () => (
 
     <Grommet theme={hpe}>
       <section>
-        <h3>Default Buttons</h3>
+        <h3>HPE Buttons</h3>
         <Container>
           <Button label='Action' onClick={onClick} />
           <Button label='Action' primary={true} onClick={onClick} />
