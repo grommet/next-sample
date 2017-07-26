@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { Grommet, Button } from 'grommet';
-import { hpe } from 'grommet/themes';
+import Home from './screens/Home';
+import Button from './screens/Button';
 
 export default class BasicApp extends Component {
   render() {
     return (
-      <div>
-        <Grommet>
-          <h1>Basic Theme</h1>
-          <Button label='hi' onClick={() => alert('hi')} />
-        </Grommet>
-        <Grommet theme={hpe}>
-          <h1>HPE Theme</h1>
-          <Button label='hi' onClick={() => alert('hi')} />
-        </Grommet>
-      </div>
+      <Router>
+        <div>
+          <Route exact={true} path='/' component={Home} />
+          <Route exact={true} path='/button' component={Button} />
+        </div>
+      </Router>
     );
   }
 }
