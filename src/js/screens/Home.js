@@ -9,8 +9,10 @@ export default () => (
     <h2>Components</h2>
 
     <section>
-      <h3>Button</h3>
-      <RoutedButton label='See all buttons' path='/button' />
+      <RoutedButton label='Button' path='/button' plain={true} />
+    </section>
+    <section>
+      <RoutedButton label='Box' path='/box' plain={true} />
     </section>
   </Grommet>
 );
