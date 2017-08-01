@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Box from './screens/Box';
 import Button from './screens/Button';
+import Heading from './screens/Heading';
 
 export default class BasicApp extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class BasicApp extends Component {
           <Route exact={true} path='/' component={Home} />
           <Route exact={true} path='/box' component={Box} />
           <Route exact={true} path='/button' component={Button} />
+          <Route exact={true} path='/heading' component={Heading} />
         </div>
       </Router>
     );
