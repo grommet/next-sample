@@ -14,5 +14,8 @@ export default () => (
     <section>
       <RoutedButton label='Box' path='/box' plain={true} />
     </section>
+    <section>
+      <RoutedButton label='Paragraph' path='/paragraph' plain={true} />
+    </section>
   </Grommet>
 );
