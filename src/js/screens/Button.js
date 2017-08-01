@@ -26,6 +26,16 @@ export default () => (
           <Button label='Action' secondary={true} onClick={onClick} />
           <Button label='Action' accent={true} onClick={onClick} />
           <Button label='Critical' critical={true} onClick={onClick} />
+          <Button
+            box={true}
+            hoverIndicator='background'
+            onClick={onClick}
+            pad='small'
+            textAlign='start'
+          >
+            <h3>Grommet 2.0 is coming</h3>
+            <p>this is a button that has box capabilities</p>
+          </Button>
         </Container>
       </section>
     </Grommet>
