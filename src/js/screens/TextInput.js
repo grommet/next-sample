@@ -1,29 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { Grommet, RoutedButton, TextInput } from 'grommet';
+import { Box, TextInput } from 'grommet';
+import doc from 'grommet/components/text-input/doc';
 
-const Container = styled.div`
-  > * {
-    margin-right: 12px;
-    margin-bottom: 12px;
-  }
-`;
+import Doc from '../components/Doc';
+
+doc(TextInput);
 
 export default () => (
-  <div>
-    <Grommet>
-      <section>
-        <h3>Default TextInput</h3>
-        <Container>
-          <TextInput id='item' name='item' />
-          <TextInput id='item' name='item' placeholder='Search' />
-        </Container>
-      </section>
-
-      <RoutedButton plain={true} path='/'>
-        Back to Home
-      </RoutedButton>
-    </Grommet>
-  </div>
+  <Doc name='TextInput' component={TextInput}>
+    <Box pad='large'>
+      <Box margin='small'>
+        <TextInput id='item' name='item' />
+      </Box>
+      <Box margin='small'>
+        <TextInput id='item' name='item' placeholder='placeholder' />
+      </Box>
+    </Box>
+  </Doc>
 );

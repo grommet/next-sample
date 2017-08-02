@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Box from './screens/Box';
 import Button from './screens/Button';
@@ -13,7 +13,7 @@ export default class BasicApp extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <Switch>
           <Route exact={true} path='/' component={Home} />
           <Route exact={true} path='/box' component={Box} />
           <Route exact={true} path='/button' component={Button} />
@@ -21,7 +21,7 @@ export default class BasicApp extends Component {
           <Route exact={true} path='/grid' component={Grid} />
           <Route exact={true} path='/paragraph' component={Paragraph} />
           <Route exact={true} path='/text-input' component={TextInput} />
-        </div>
+        </Switch>
       </Router>
     );
   }

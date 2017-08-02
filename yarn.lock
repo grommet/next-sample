@@ -2644,7 +2644,7 @@ grommet-cli@^5.1.0:
 
 "grommet@https://github.com/grommet/grommet/tarball/NEXT-stable":
   version "2.0.0"
-  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#a2548e57fbc94ff35b41f401f6e83f526c54a230"
+  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#3677094cf3909df9617216ffd0c2f3577b292e9e"
   dependencies:
     deep-assign "^2.0.0"
     polished "^1.3.0"
@@ -4484,6 +4484,13 @@ react-desc@^1.2.0:
     prop-types "^15.5.8"
     react "^15.5.4"
 
+react-desc@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/react-desc/-/react-desc-1.3.4.tgz#10d9d7ae4648c8bec4f288def53b95841baa8ba7"
+  dependencies:
+    prop-types "^15.5.8"
+    react "^15.5.4"
+
 react-dev-utils@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-0.4.2.tgz#ba6fae581fe945a2fc402e9b27c71fda4f62f6a1"
@@ -4636,8 +4643,8 @@ recompose@^0.24.0:
     symbol-observable "^1.0.4"
 
 redbox-react@^1.2.2:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.4.3.tgz#51744987867ea4627d58ccb1b0e5df5a5ae40e57"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.5.0.tgz#04dab11557d26651bf3562a67c22ace56c5d3967"
   dependencies:
     error-stack-parser "^1.3.6"
     object-assign "^4.0.1"

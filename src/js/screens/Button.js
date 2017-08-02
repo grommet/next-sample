@@ -1,60 +1,48 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { Button, Grommet, RoutedButton } from 'grommet';
-import { hpe } from 'grommet/themes';
+import { Box, Button, Heading } from 'grommet';
+import doc from 'grommet/components/button/doc';
+// import { hpe } from 'grommet/themes';
 
-const Container = styled.div`
-  > * {
-    margin-right: 12px;
-    margin-bottom: 12px;
-  }
-`;
+import Doc from '../components/Doc';
+
+doc(Button);
 
 function onClick() {
   alert('hi');
 }
 
 export default () => (
-  <div>
-    <Grommet>
-      <section>
-        <h3>Default Buttons</h3>
-        <Container>
-          <Button label='Action' onClick={onClick} />
-          <Button label='Action' primary={true} onClick={onClick} />
-          <Button label='Action' secondary={true} onClick={onClick} />
-          <Button label='Action' accent={true} onClick={onClick} />
-          <Button label='Critical' critical={true} onClick={onClick} />
-          <Button
-            box={true}
-            hoverIndicator='background'
-            onClick={onClick}
-            pad='small'
-            textAlign='start'
-          >
-            <h3>Grommet 2.0 is coming</h3>
-            <p>this is a button that has box capabilities</p>
-          </Button>
-        </Container>
-      </section>
-    </Grommet>
-
-    <Grommet theme={hpe}>
-      <section>
-        <h3>HPE Buttons</h3>
-        <Container>
-          <Button label='Action' onClick={onClick} />
-          <Button label='Action' primary={true} onClick={onClick} />
-          <Button label='Action' secondary={true} onClick={onClick} />
-          <Button label='Action' accent={true} onClick={onClick} />
-          <Button label='Critical' critical={true} onClick={onClick} />
-        </Container>
-      </section>
-
-      <RoutedButton plain={true} path='/'>
-        Back to Home
-      </RoutedButton>
-    </Grommet>
-  </div>
+  <Doc name='Button' component={Button}>
+    <Box pad='large' align='start'>
+      <Box margin='small'>
+        <Button label='Default' onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button label='Primary' primary={true} onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button label='Secondary' secondary={true} onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button label='Accent' accent={true} onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button label='Critical' critical={true} onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button
+          plain={true}
+          hoverIndicator='background'
+          onClick={onClick}
+          textAlign='start'
+        >
+          <Box margin='small'>
+            <span>Box with</span>
+            <Heading level={2} margin='none'>Heading</Heading>
+          </Box>
+        </Button>
+      </Box>
+    </Box>
+  </Doc>
 );

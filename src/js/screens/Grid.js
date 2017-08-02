@@ -1,18 +1,22 @@
 import React from 'react';
 
-import { Box, Grid, Grommet, RoutedButton } from 'grommet';
+import { Box, Grid } from 'grommet';
+import doc from 'grommet/components/grid/doc';
+
+import Doc from '../components/Doc';
+
+doc(Grid);
 
 export default () => (
-  <Grommet>
-    <h1>Grid</h1>
+  <Doc name='Grid' component={Grid}>
     <Grid
       rows={['xxsmall', 'medium', 'xsmall']}
       columns={['3/4', '1/4']}
       areas={[
-        { name: 'header', start: [0, 0], end: [0, 1] },
-        { name: 'main', start: [1, 0], end: [1, 0] },
+        { name: 'header', start: [0, 0], end: [1, 0] },
+        { name: 'main', start: [0, 1], end: [0, 1] },
         { name: 'sidebar', start: [1, 1], end: [1, 1] },
-        { name: 'footer', start: [2, 0], end: [2, 1] },
+        { name: 'footer', start: [0, 2], end: [1, 2] },
       ]}
       gap='small'
     >
@@ -53,9 +57,5 @@ export default () => (
         Footer
       </Box>
     </Grid>
-
-    <RoutedButton plain={true} path='/'>
-      Back to Home
-    </RoutedButton>
-  </Grommet>
+  </Doc>
 );

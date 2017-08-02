@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { Paragraph, Grommet, RoutedButton } from 'grommet';
+import { Box, Paragraph } from 'grommet';
+import doc from 'grommet/components/paragraph/doc';
+
+import Doc from '../components/Doc';
+
+doc(Paragraph);
 
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -10,20 +15,11 @@ esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export default () => (
-  <div>
-    <Grommet>
-      <section>
-        <h3>Default Paragraph</h3>
-        <Paragraph>{LOREM_IPSUM}</Paragraph>
-        <h3>Large Paragraph</h3>
-        <Paragraph size='large'>{LOREM_IPSUM}</Paragraph>
-        <h3>Small Paragraph</h3>
-        <Paragraph size='small'>{LOREM_IPSUM}</Paragraph>
-      </section>
-
-      <RoutedButton plain={true} path='/'>
-        Back to Home
-      </RoutedButton>
-    </Grommet>
-  </div>
+  <Doc name='Paragraph' component={Paragraph}>
+    <Box pad='large'>
+      <Paragraph><strong>Default</strong> {LOREM_IPSUM}</Paragraph>
+      <Paragraph size='large'><strong>Large</strong> {LOREM_IPSUM}</Paragraph>
+      <Paragraph size='small'><strong>Small</strong> {LOREM_IPSUM}</Paragraph>
+    </Box>
+  </Doc>
 );
