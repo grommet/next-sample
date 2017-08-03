@@ -20,8 +20,8 @@ export default class Props extends Component {
   }
 
   render() {
+    const { name, onTheme, theme, themes } = this.props;
     const { description, properties } = this.state;
-    const { name } = this.props;
 
     const props = properties.map(property => (
       <Box key={property.name}>
@@ -33,6 +33,12 @@ export default class Props extends Component {
       </Box>
     ));
 
+    const themeOptions = themes.map(t => <option key={t}>{t}</option>);
+    let homePath = '/';
+    if (theme) {
+      homePath += `?theme=${theme}`;
+    }
+
     return (
       <Box basis='medium' background='light-1'>
         <Box
@@ -41,10 +47,14 @@ export default class Props extends Component {
           justify='between'
           align='center'
         >
-          <RoutedButton path='/' plain={true} >
+          <RoutedButton path={homePath} plain={true} >
             <svg width='96px' height='96px' viewBox='0 0 96 96' version='1.1'>
               <g fill='none' fillRule='evenodd'>
-                <polygon stroke='#333333' strokeWidth='3' points='11.5 69 69 11.5 11.5 11.5' />
+                <polygon
+                  stroke='#333333'
+                  strokeWidth='3'
+                  points='11.5 69 69 11.5 11.5 11.5'
+                />
               </g>
             </svg>
           </RoutedButton>
@@ -52,11 +62,17 @@ export default class Props extends Component {
             <Heading margin='none'>{name}</Heading>
           </Box>
         </Box>
-        <Box pad='medium'>
+        <Box margin='medium'>
           <Paragraph>
             {description}
           </Paragraph>
           {props}
+        </Box>
+        <Box margin='medium'>
+          <Heading level={3}>Theme</Heading>
+          <select value={theme} onChange={event => onTheme(event.target.value)}>
+            {themeOptions}
+          </select>
         </Box>
       </Box>
     );
