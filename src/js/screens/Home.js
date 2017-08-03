@@ -13,7 +13,7 @@ const THEMES = {
 const Home = (props, context) => {
   const { router: { route: { location } } } = context;
   let theme;
-  let suffix;
+  let suffix = '';
   if (location.search) {
     const params = new URLSearchParams(location.search);
     const themeName = params.get('theme');
