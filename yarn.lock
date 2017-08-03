@@ -2644,13 +2644,13 @@ grommet-cli@^5.1.0:
 
 "grommet@https://github.com/grommet/grommet/tarball/NEXT-stable":
   version "2.0.0"
-  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#3677094cf3909df9617216ffd0c2f3577b292e9e"
+  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#55712e06f7795b635ae268edef70a0270d42183f"
   dependencies:
     deep-assign "^2.0.0"
     polished "^1.3.0"
     prop-types "^15.5.10"
     react "^15.4.0"
-    react-desc "^1.2.0"
+    react-desc "^1.3.4"
     react-dom "^15.4.0"
     recompose "^0.24.0"
     styled-components "^2.1.1"
@@ -4477,16 +4477,9 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
-react-desc@^1.2.0:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/react-desc/-/react-desc-1.3.4.tgz#10d9d7ae4648c8bec4f288def53b95841baa8ba7"
-  dependencies:
-    prop-types "^15.5.8"
-    react "^15.5.4"
-
-react-desc@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/react-desc/-/react-desc-1.3.5.tgz#038ffe527cb096b2529e8e9e091d31bf722aad51"
+react-desc@^1.3.4, react-desc@^1.3.5:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/react-desc/-/react-desc-1.3.6.tgz#50867edb9ba863c8e4c86069091a4d8d70630e58"
   dependencies:
     prop-types "^15.5.8"
     react "^15.5.4"
