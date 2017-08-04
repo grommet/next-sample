@@ -1,6 +1,9 @@
 language: node_js
+sudo: required
+services:
+  - docker
 node_js:
-- '6.9.1'
+  - '6.9.1'
 sudo: false
 cache:
   directories:
@@ -8,6 +11,6 @@ cache:
 script:
   - npm test
 after_success:
-  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - docker build -t grommet/next-sample:latest .
   - docker push grommet/next-sample:latest
