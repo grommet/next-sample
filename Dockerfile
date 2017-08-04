@@ -1,9 +1,6 @@
 
 FROM node:alpine
 
-ENV http_proxy http://web-proxy.corp.hp.com:8088
-ENV https_proxy http://web-proxy.corp.hp.com:8088
-
 RUN npm install live-server -g
 
 WORKDIR /tmp
