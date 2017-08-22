@@ -6,6 +6,7 @@ import Button from './screens/Button';
 import Heading from './screens/Heading';
 import Home from './screens/Home';
 import Grid from './screens/Grid';
+import Meter from './screens/Meter';
 import Paragraph from './screens/Paragraph';
 import TextInput from './screens/TextInput';
 
@@ -19,6 +20,7 @@ export default class BasicApp extends Component {
           <Route exact={true} path='/button' component={Button} />
           <Route exact={true} path='/heading' component={Heading} />
           <Route exact={true} path='/grid' component={Grid} />
+          <Route exact={true} path='/meter' component={Meter} />
           <Route exact={true} path='/paragraph' component={Paragraph} />
           <Route exact={true} path='/text-input' component={TextInput} />
         </Switch>
