@@ -23,7 +23,7 @@ export default class Props extends Component {
     const { name, onTheme, theme, themes } = this.props;
     const { description, properties } = this.state;
 
-    const props = properties.map(property => (
+    const props = (properties || []).map(property => (
       <Box key={property.name}>
         <Heading level={3} size='small'>
           <strong>{property.name}</strong>
