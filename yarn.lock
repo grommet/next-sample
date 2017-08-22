@@ -1308,8 +1308,8 @@ cli-width@^1.0.1:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-1.1.1.tgz#a4d293ef67ebb7b88d4a4d42c0ccf00c4d1e366d"
 
 cli-width@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
 
 cliui@^2.1.0:
   version "2.1.0"
@@ -2638,7 +2638,7 @@ grommet-cli@^5.1.0:
 
 "grommet@https://github.com/grommet/grommet/tarball/NEXT-stable":
   version "2.0.0"
-  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#2e070d0d66680b527028e87da73db000d9bde47a"
+  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#078ca996e13fc4115bcb33eaf18d283c17a35767"
   dependencies:
     deep-assign "^2.0.0"
     polished "^1.3.0"
