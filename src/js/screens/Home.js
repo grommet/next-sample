@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import URLSearchParams from 'url-search-params';
 
 import {
-  Box, Grid, Grommet, Heading, Meter, Paragraph, RoutedButton, TextInput,
+  Box, Grid, Grommet, Heading, Meter, Paragraph, RoutedButton, Stack, TextInput,
 } from 'grommet';
 import { hpe } from 'grommet/themes';
 
@@ -66,6 +66,18 @@ const Home = (props, context) => {
                 <Meter values={[{ value: 60, label: 'sixty' }]} />
                 <Box margin={{ horizontal: 'small' }}>Meter</Box>
               </Box>
+            </RoutedButton>
+          </Box>
+          <Box margin={{ vertical: 'medium' }}>
+            <RoutedButton path={`/stack${suffix}`} plain={true}>
+              <Stack>
+                <Box pad='large' background='light-2'>
+                  <Heading level={3}>BASE</Heading>
+                </Box>
+                <Box margin='small' border='all'>
+                  <Heading level={1} margin='none'>Stack</Heading>
+                </Box>
+              </Stack>
             </RoutedButton>
           </Box>
         </Box>
