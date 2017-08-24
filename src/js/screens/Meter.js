@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Meter } from 'grommet';
+import { Box, Meter, Stack, Heading } from 'grommet';
 import doc from 'grommet/components/meter/doc';
 
 import Doc from '../components/Doc';
@@ -121,6 +121,19 @@ export default () => (
           size='full'
           values={MULTIPLE_VALUES}
         />
+      </Box>
+      <Box margin={{ vertical: 'medium' }} alignSelf='start'>
+        <Stack>
+          <Meter
+            type='circle'
+            cap='round'
+            size='medium'
+            values={MULTIPLE_VALUES}
+          />
+          <Box justify='center' align='center'>
+            <Heading tag='h2' strong={true}>60</Heading>
+          </Box>
+        </Stack>
       </Box>
     </Box>
   </Doc>
