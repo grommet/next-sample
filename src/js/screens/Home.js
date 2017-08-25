@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import URLSearchParams from 'url-search-params';
 
 import {
-  Box, Grid, Grommet, Heading, Meter, Paragraph, RoutedButton, Stack, TextInput,
+  Box, Grid, Grommet, Heading, Markdown, Meter, Paragraph, RoutedButton, Stack,
+  Text, TextInput,
 } from 'grommet';
 import { hpe } from 'grommet/themes';
 
@@ -53,6 +54,13 @@ const Home = (props, context) => {
           </RoutedButton>
           <RoutedButton path={`/paragraph${suffix}`} plain={true}>
             <Paragraph>Paragraph of text.</Paragraph>
+          </RoutedButton>
+
+          <RoutedButton path={`/text${suffix}`} plain={true}>
+            <Text>Text</Text>
+          </RoutedButton>
+          <RoutedButton path={`/markdown${suffix}`} plain={true}>
+            <Markdown content='### Markdown' />
           </RoutedButton>
           <RoutedButton path={`/button${suffix}`} label='Button' />
           <Box margin={{ vertical: 'medium' }}>
