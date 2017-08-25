@@ -2638,7 +2638,7 @@ grommet-cli@^5.1.0:
 
 "grommet@https://github.com/grommet/grommet/tarball/NEXT-stable":
   version "2.0.0"
-  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#078ca996e13fc4115bcb33eaf18d283c17a35767"
+  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#cf2e298b5e961214462a8ca6559fc80cf37ea10f"
   dependencies:
     deep-assign "^2.0.0"
     polished "^1.3.0"
@@ -4535,14 +4535,15 @@ react-proxy@^1.1.7:
     react-deep-force-update "^1.0.0"
 
 react-router-dom@^4.1.2:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.0.tgz#84238285ac31a1afe53c87a751b9f1ffc5b69af7"
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
   dependencies:
     history "^4.7.2"
     invariant "^2.2.2"
     loose-envify "^1.3.1"
     prop-types "^15.5.4"
     react-router "^4.2.0"
+    warning "^3.0.0"
 
 react-router@^4.2.0:
   version "4.2.0"
