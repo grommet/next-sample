@@ -9,6 +9,7 @@ import Grid from './screens/Grid';
 import Meter from './screens/Meter';
 import Paragraph from './screens/Paragraph';
 import Stack from './screens/Stack';
+import Text from './screens/Text';
 import TextInput from './screens/TextInput';
 
 export default class BasicApp extends Component {
@@ -24,6 +25,7 @@ export default class BasicApp extends Component {
           <Route exact={true} path='/meter' component={Meter} />
           <Route exact={true} path='/paragraph' component={Paragraph} />
           <Route exact={true} path='/stack' component={Stack} />
+          <Route exact={true} path='/text' component={Text} />
           <Route exact={true} path='/text-input' component={TextInput} />
         </Switch>
       </Router>
