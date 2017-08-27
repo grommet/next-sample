@@ -2845,7 +2845,7 @@ grommet-cli@^5.1.0:
 
 "grommet@https://github.com/grommet/grommet/tarball/NEXT-stable":
   version "2.0.0"
-  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#543fedf16f7b22f5784e3807fcfa836c4e8d3d7b"
+  resolved "https://github.com/grommet/grommet/tarball/NEXT-stable#2d10601f3f237f925af55f5f0894da193849c0cb"
   dependencies:
     deep-assign "^2.0.0"
     markdown-to-jsx "^5.4.2"
