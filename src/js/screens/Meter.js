@@ -12,7 +12,7 @@ const SINGLE_VALUE = [
 ];
 const MULTIPLE_VALUES = [
   { value: 60, label: 'sixty', color: 'neutral-1', onClick: () => alert('60') },
-  { value: 10, label: 'ten', color: 'neutral-2', onClick: () => alert('10') },
+  { value: 10, label: 'ten', color: 'accent-1', onClick: () => alert('10') },
 ];
 
 export default class MeterDoc extends Component {
@@ -45,7 +45,7 @@ export default class MeterDoc extends Component {
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
-              cap='round'
+              round={true}
               size='xsmall'
               thickness='xsmall'
               values={multipleValues}
@@ -53,7 +53,7 @@ export default class MeterDoc extends Component {
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
-              cap='round'
+              round={true}
               size='small'
               thickness='small'
               values={multipleValues}
@@ -61,7 +61,7 @@ export default class MeterDoc extends Component {
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
-              cap='round'
+              round={true}
               size='large'
               thickness='large'
               values={multipleValues}
@@ -69,7 +69,7 @@ export default class MeterDoc extends Component {
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
-              cap='round'
+              round={true}
               size='xlarge'
               thickness='xlarge'
               values={multipleValues}
@@ -93,14 +93,14 @@ export default class MeterDoc extends Component {
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               values={multipleValues}
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               size='xsmall'
               thickness='xsmall'
               values={multipleValues}
@@ -109,7 +109,7 @@ export default class MeterDoc extends Component {
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               size='small'
               thickness='small'
               values={multipleValues}
@@ -118,7 +118,7 @@ export default class MeterDoc extends Component {
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               size='large'
               thickness='large'
               values={multipleValues}
@@ -127,7 +127,7 @@ export default class MeterDoc extends Component {
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               size='xlarge'
               thickness='xlarge'
               values={multipleValues}
@@ -136,7 +136,7 @@ export default class MeterDoc extends Component {
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
-              cap='round'
+              round={true}
               size='full'
               values={multipleValues}
             />
@@ -145,7 +145,7 @@ export default class MeterDoc extends Component {
             <Stack>
               <Meter
                 type='circle'
-                cap='round'
+                round={true}
                 size='medium'
                 values={multipleValues}
               />

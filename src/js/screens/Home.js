@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import URLSearchParams from 'url-search-params';
 
 import {
-  Box, Grid, Grommet, Heading, Markdown, Meter, Paragraph, RoutedButton, Stack,
-  Text, TextInput,
+  Box, Chart, Grid, Grommet, Heading, Markdown, Meter, Paragraph,
+  RoutedButton, Stack, Text, TextInput,
 } from 'grommet';
 import { hpe } from 'grommet/themes';
 
@@ -71,8 +71,33 @@ const Home = (props, context) => {
           <Box margin={{ vertical: 'medium' }}>
             <RoutedButton path={`/meter${suffix}`} plain={true}>
               <Box direction='row'>
-                <Meter values={[{ value: 60, label: 'sixty' }]} />
-                <Box margin={{ horizontal: 'small' }}>Meter</Box>
+                <Meter
+                  title='Meter example'
+                  values={[{ value: 60, label: 'sixty' }]}
+                />
+                <Text margin={{ horizontal: 'small' }}>Meter</Text>
+              </Box>
+            </RoutedButton>
+          </Box>
+          <Box margin={{ vertical: 'medium' }}>
+            <RoutedButton path={`/chart${suffix}`} plain={true}>
+              <Box direction='row'>
+                <Chart
+                  title='Chart example'
+                  bounds={[[0, 7], [0, 100]]}
+                  size={{ width: 'medium', height: 'xsmall' }}
+                  values={[
+                    { value: [7, 90], label: 'ninety' },
+                    { value: [6, 80], label: 'eighty' },
+                    { value: [5, 60], label: 'sixty' },
+                    { value: [4, 70], label: 'seventy' },
+                    { value: [3, 60], label: 'sixty' },
+                    { value: [2, 40], label: 'forty' },
+                    { value: [1, 30], label: 'thirty' },
+                    { value: [0, 0], label: 'zero' },
+                  ]}
+                />
+                <Text margin={{ horizontal: 'small' }}>Chart</Text>
               </Box>
             </RoutedButton>
           </Box>
