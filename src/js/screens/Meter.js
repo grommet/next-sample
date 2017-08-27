@@ -26,7 +26,7 @@ export default () => (
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Meter
-          cap='round'
+          round={true}
           size='xsmall'
           thickness='xsmall'
           values={MULTIPLE_VALUES}
@@ -34,7 +34,7 @@ export default () => (
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Meter
-          cap='round'
+          round={true}
           size='small'
           thickness='small'
           values={MULTIPLE_VALUES}
@@ -42,7 +42,7 @@ export default () => (
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Meter
-          cap='round'
+          round={true}
           size='large'
           thickness='large'
           values={MULTIPLE_VALUES}
@@ -50,7 +50,7 @@ export default () => (
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Meter
-          cap='round'
+          round={true}
           size='xlarge'
           thickness='xlarge'
           values={MULTIPLE_VALUES}
@@ -74,14 +74,14 @@ export default () => (
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           values={MULTIPLE_VALUES}
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           size='xsmall'
           thickness='xsmall'
           values={MULTIPLE_VALUES}
@@ -90,7 +90,7 @@ export default () => (
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           size='small'
           thickness='small'
           values={MULTIPLE_VALUES}
@@ -99,7 +99,7 @@ export default () => (
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           size='large'
           thickness='large'
           values={MULTIPLE_VALUES}
@@ -108,7 +108,7 @@ export default () => (
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           size='xlarge'
           thickness='xlarge'
           values={MULTIPLE_VALUES}
@@ -117,16 +117,27 @@ export default () => (
       <Box margin={{ vertical: 'medium' }}>
         <Meter
           type='circle'
-          cap='round'
+          round={true}
           size='full'
           values={MULTIPLE_VALUES}
         />
       </Box>
       <Box margin={{ vertical: 'medium' }} alignSelf='start'>
+        <Meter
+          round={true}
+          size='medium'
+          values={MULTIPLE_VALUES}
+        />
+        <Box direction='row' responsive={false} justify='between'>
+          <Text>0</Text>
+          <Text>100</Text>
+        </Box>
+      </Box>
+      <Box margin={{ vertical: 'medium' }} alignSelf='start'>
         <Stack>
           <Meter
             type='circle'
-            cap='round'
+            round={true}
             size='medium'
             values={MULTIPLE_VALUES}
           />
