@@ -18,7 +18,12 @@ export default () => (
           image: 'url(https://grommet.github.io/img/carousel-2.png)',
           dark: false,
         }}
-      >Image background</Box>
+      >
+        Image background
+      </Box>
+      <Box pad='medium' border={{ color: 'accent-2', size: 'large' }}>
+        Border
+      </Box>
     </Box>
   </Doc>
 );
