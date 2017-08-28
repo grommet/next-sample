@@ -10,9 +10,9 @@ doc(Text);
 export default () => (
   <Doc name='Text' component={Text}>
     <Box pad='large'>
-      <Text>Text</Text>
       <Text size='xsmall'>Text XSmall</Text>
       <Text size='small'>Text Small</Text>
+      <Text size='medium'>Text Medium</Text>
       <Text size='large'>Text Large</Text>
       <Text size='xlarge'>Text XLarge</Text>
       <Text size='xxlarge'>Text XXLarge</Text>

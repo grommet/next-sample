@@ -13,6 +13,17 @@ const THEMES = {
   hpe,
 };
 
+const CHART_VALUES = [
+  { value: [7, 90], label: 'ninety' },
+  { value: [6, 80], label: 'eighty' },
+  { value: [5, 60], label: 'sixty' },
+  { value: [4, 70], label: 'seventy' },
+  { value: [3, 60], label: 'sixty' },
+  { value: [2, 40], label: 'forty' },
+  { value: [1, 30], label: 'thirty' },
+  { value: [0, 0], label: 'zero' },
+];
+
 const Home = (props, context) => {
   const { router: { route: { location } } } = context;
   let theme;
@@ -48,70 +59,75 @@ const Home = (props, context) => {
             a <RoutedButton path={`/grid${suffix}`} label='Grid' plain={true} />
           </span>
         </Box>
-        <Box gridArea='main' pad='medium' align='start'>
-          <RoutedButton path={`/heading${suffix}`} box={true}>
-            <Heading level={2} margin='none'>Heading</Heading>
-          </RoutedButton>
-          <RoutedButton path={`/paragraph${suffix}`} plain={true}>
-            <Paragraph>Paragraph of text.</Paragraph>
-          </RoutedButton>
+        <Box gridArea='main' direction='row' wrap={true} pad='small'>
 
-          <RoutedButton path={`/text${suffix}`} plain={true}>
-            <Text>Text</Text>
-          </RoutedButton>
-          <RoutedButton path={`/markdown${suffix}`} plain={true}>
-            <Markdown content='### Markdown' />
-          </RoutedButton>
-          <RoutedButton path={`/button${suffix}`} label='Button' />
-          <Box margin={{ vertical: 'medium' }}>
-            <RoutedButton path={`/text-input${suffix}`} plain={true}>
-              <TextInput placeholder='TextInput' />
+          <Box align='start' pad='small' basis='medium'>
+            <RoutedButton path={`/heading${suffix}`} box={true}>
+              <Heading level={2} margin='none'>Heading</Heading>
+            </RoutedButton>
+            <RoutedButton path={`/paragraph${suffix}`} plain={true}>
+              <Paragraph>Paragraph of text.</Paragraph>
+            </RoutedButton>
+
+            <RoutedButton path={`/text${suffix}`} plain={true}>
+              <Text>Text</Text>
+            </RoutedButton>
+            <RoutedButton path={`/markdown${suffix}`} plain={true}>
+              <Markdown content='### Markdown' />
             </RoutedButton>
           </Box>
-          <Box margin={{ vertical: 'medium' }}>
-            <RoutedButton path={`/meter${suffix}`} plain={true}>
-              <Box direction='row'>
-                <Meter
-                  title='Meter example'
-                  values={[{ value: 60, label: 'sixty' }]}
-                />
-                <Text margin={{ horizontal: 'small' }}>Meter</Text>
-              </Box>
-            </RoutedButton>
+
+          <Box align='start' pad='small' basis='medium'>
+            <RoutedButton path={`/button${suffix}`} label='Button' />
+            <Box margin={{ vertical: 'medium' }}>
+              <RoutedButton path={`/text-input${suffix}`} plain={true}>
+                <TextInput placeholder='TextInput' />
+              </RoutedButton>
+            </Box>
           </Box>
-          <Box margin={{ vertical: 'medium' }}>
-            <RoutedButton path={`/chart${suffix}`} plain={true}>
-              <Box direction='row'>
-                <Chart
-                  title='Chart example'
-                  bounds={[[0, 7], [0, 100]]}
-                  size={{ width: 'medium', height: 'xsmall' }}
-                  values={[
-                    { value: [7, 90], label: 'ninety' },
-                    { value: [6, 80], label: 'eighty' },
-                    { value: [5, 60], label: 'sixty' },
-                    { value: [4, 70], label: 'seventy' },
-                    { value: [3, 60], label: 'sixty' },
-                    { value: [2, 40], label: 'forty' },
-                    { value: [1, 30], label: 'thirty' },
-                    { value: [0, 0], label: 'zero' },
-                  ]}
-                />
-                <Text margin={{ horizontal: 'small' }}>Chart</Text>
-              </Box>
-            </RoutedButton>
-          </Box>
-          <Box margin={{ vertical: 'medium' }}>
-            <RoutedButton path={`/stack${suffix}`} plain={true}>
-              <Stack>
-                <Box pad='large' background='light-2'>
-                  <Heading level={3}>BASE</Heading>
-                </Box>
-                <Box margin='small' border='all'>
-                  <Heading level={1} margin='none'>Stack</Heading>
-                </Box>
-              </Stack>
-            </RoutedButton>
+
+          <Box basis='medium'>
+            <Box margin='small'>
+              <RoutedButton path={`/meter${suffix}`} plain={true}>
+                <Stack anchor='top-right'>
+                  <Meter
+                    title='Meter example'
+                    values={[{ value: 60, label: 'sixty' }]}
+                  />
+                  <Text margin={{ horizontal: 'small' }}>Meter</Text>
+                </Stack>
+              </RoutedButton>
+            </Box>
+            <Box margin='small'>
+              <RoutedButton path={`/chart${suffix}`} plain={true}>
+                <Stack anchor='top-left'>
+                  <Chart
+                    title='Chart example'
+                    bounds={[[0, 7], [0, 100]]}
+                    size={{ width: 'medium', height: 'xsmall' }}
+                    values={CHART_VALUES}
+                  />
+                  <Text>Chart</Text>
+                </Stack>
+              </RoutedButton>
+            </Box>
+            <Box margin='small'>
+              <RoutedButton path={`/stack${suffix}`} plain={true}>
+                <Stack>
+                  <Box pad='large'>
+                    <Heading level={3} margin='none' textAlign='center'>
+                      Stack
+                    </Heading>
+                  </Box>
+                  <Box
+                    pad={{ top: 'medium', left: 'small', right: 'small' }}
+                    border={{ color: 'light-4' }}
+                  >
+                    <Heading level={2} margin='small'>Stack</Heading>
+                  </Box>
+                </Stack>
+              </RoutedButton>
+            </Box>
           </Box>
         </Box>
       </Grid>
