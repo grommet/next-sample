@@ -14,8 +14,18 @@ export default () => (
         <Box pad='large' background='light-2'>
           <Heading level={3}>BASE</Heading>
         </Box>
-        <Box margin='medium' pad='small' justify='center' align='center'>
-          <Heading level={1} margin='none'>Stack</Heading>
+        <Box margin='none' pad='small' background='light-3' justify='center' align='center'>
+          <Heading level={2} margin='none'>Stack, center</Heading>
+        </Box>
+      </Stack>
+    </Box>
+    <Box pad='large'>
+      <Stack anchor='top-right'>
+        <Box pad='large' background='light-2'>
+          <Heading level={3}>BASE</Heading>
+        </Box>
+        <Box margin='none' pad='small' background='light-3' justify='center' align='center'>
+          <Heading level={2} margin='none'>Stack, top-right</Heading>
         </Box>
       </Stack>
     </Box>
