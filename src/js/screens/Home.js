@@ -99,9 +99,26 @@ export default class Home extends Component {
               <RoutedButton path={`/button${suffix}`} label='Button' />
               <Box margin={{ vertical: 'medium' }}>
                 <RoutedButton path={`/text-input${suffix}`} plain={true}>
-                  <TextInput placeholder='TextInput' />
+                  <TextInput placeholder='TextInput' disabled={true} />
                 </RoutedButton>
               </Box>
+              <RoutedButton path={`/layer${suffix}`}>
+                <Box direction='row'>
+                  <Box
+                    background='dark-5'
+                    pad={{ horizontal: 'large', vertical: 'small' }}
+                  >
+                    -
+                  </Box>
+                  <Box
+                    border='all'
+                    basis='medium'
+                    pad={{ horizontal: 'medium', vertical: 'small' }}
+                  >
+                    Layer
+                  </Box>
+                </Box>
+              </RoutedButton>
             </Box>
 
             <Box basis='medium'>
@@ -162,7 +179,7 @@ export default class Home extends Component {
                 'status-disabled',
               ].map(color => (
                 <Box key={color} flex='grow'>
-                  <Button onClick={this.selectColor(color)}>
+                  <Button a11yTitle={`${color} color`} onClick={this.selectColor(color)}>
                     <Box background={color} pad='small'>
                       {activeColor === color ? color : ''}
                     </Box>
