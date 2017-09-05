@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Box, Button, Heading } from 'grommet';
 import doc from 'grommet/components/button/doc';
-// import { hpe } from 'grommet/themes';
+
+import { SocialFacebook } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
@@ -29,6 +30,9 @@ export default () => (
       </Box>
       <Box margin='small'>
         <Button label='Critical' critical={true} onClick={onClick} />
+      </Box>
+      <Box margin='small'>
+        <Button icon={<SocialFacebook colorIndex='plain' />} onClick={onClick} />
       </Box>
       <Box margin='small'>
         <Button

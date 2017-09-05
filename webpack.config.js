@@ -68,6 +68,7 @@ if (env === 'production') {
     console.log('Using alias to local grommet.');
     alias = {
       'grommet': path.resolve(__dirname, '../grommet/src/js'),
+      'grommet-icons': path.resolve(__dirname, '../grommet-icons/src/js'),
     };
   }
 }
