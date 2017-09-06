@@ -3,26 +3,11 @@ import React, { Component } from 'react';
 import { Box, Button, Heading, Layer, Text, TextInput } from 'grommet';
 import doc from 'grommet/components/layer/doc';
 
+import { CoreClose } from 'grommet-icons';
+
 import Doc from '../components/Doc';
 
 doc(Layer);
-
-const closeIcon = (
-  <svg
-    version='1.1'
-    viewBox='0 0 24 24'
-    width='24px'
-    height='24px'
-    role='img'
-  >
-    <path
-      fill='none'
-      stroke='#333'
-      strokeWidth='2'
-      d='M3,3 L21,21 M3,21 L21,3'
-    />
-  </svg>
-);
 
 export default class LayerDoc extends Component {
   state = {
@@ -42,7 +27,7 @@ export default class LayerDoc extends Component {
       layerNode = (
         <Layer align={align} onEsc={close}>
           <Box pad={{ horizontal: 'medium' }}>
-            <Heading level='2' margin='medium'>Confirm</Heading>
+            <Heading level={2} margin='medium'>Confirm</Heading>
             <Text>
               Are you sure you want to close this layer?
             </Text>
@@ -56,11 +41,11 @@ export default class LayerDoc extends Component {
       const close = () => this.setState({ showFormLayer: false });
       layerNode = (
         <Layer align={align} onEsc={close} size='medium'>
+          <Box pad='xsmall' align='end'>
+            <Button icon={<CoreClose />} onClick={close} />
+          </Box>
           <Box pad='medium'>
-            <Box align='end'>
-              <Button icon={closeIcon} onClick={close} />
-            </Box>
-            <Heading level='3' margin='none'>
+            <Heading level={3} margin='none'>
               <strong>Form</strong>
             </Heading>
             <Box pad={{ vertical: 'medium' }}>
