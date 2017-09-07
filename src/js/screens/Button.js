@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Button, Heading } from 'grommet';
-import doc from 'grommet/components/button/doc';
+import doc from 'grommet/components/Button/doc';
 
 import { SocialFacebook } from 'grommet-icons';
 

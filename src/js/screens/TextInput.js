@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Box, TextInput } from 'grommet';
-import doc from 'grommet/components/text-input/doc';
+import doc from 'grommet/components/TextInput/doc';
 
 import Doc from '../components/Doc';
 

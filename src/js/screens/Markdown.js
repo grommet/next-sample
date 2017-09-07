@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Markdown } from 'grommet';
-import doc from 'grommet/components/markdown/doc';
+import doc from 'grommet/components/Markdown/doc';
 
 import Doc from '../components/Doc';
 
