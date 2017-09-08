@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Box, Button, Heading, Layer, Text, TextInput } from 'grommet';
-import doc from 'grommet/components/layer/doc';
+import doc from 'grommet/components/Layer/doc';
 
 import { CoreClose } from 'grommet-icons';
 
