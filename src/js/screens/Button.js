@@ -32,7 +32,7 @@ export default () => (
         <Button label='Critical' critical={true} onClick={onClick} />
       </Box>
       <Box margin='small'>
-        <Button icon={<SocialFacebook colorIndex='plain' />} onClick={onClick} />
+        <Button icon={<SocialFacebook color='plain' />} onClick={onClick} />
       </Box>
       <Box margin='small'>
         <Button
