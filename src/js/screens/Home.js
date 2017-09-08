@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Box, Button, Chart, Grid, Heading, Markdown, Meter, Paragraph,
+  Box, Button, Chart, Grid, Heading, Image, Markdown, Meter, Paragraph,
   RoutedButton, Stack, Text, TextInput,
 } from 'grommet';
 
@@ -142,6 +142,23 @@ export default class Home extends Component {
               </RoutedButton>
             </Box>
           </Box>
+
+          <Box basis='medium'>
+            <Box margin='small'>
+              <RoutedButton path='/image' plain={true}>
+                <Box align='center'>
+                  <Box basis='small'>
+                    <Image
+                      fit='contain'
+                      src='http://www.seafordcinema.org/wp-content/uploads/2016/11/hunt-for-the-wilderpeople-1.jpg'
+                    />
+                  </Box>
+                  <Text margin={{ horizontal: 'small' }}>Image</Text>
+                </Box>
+              </RoutedButton>
+            </Box>
+          </Box>
+
           <Box
             direction='row'
             basis='full'
