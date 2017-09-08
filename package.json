@@ -11,10 +11,12 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "test": "grommet check",
     "dev": "cross-env NODE_ENV=development grommet pack",
     "dev-alias": "cross-env NODE_ENV=development USE_ALIAS=true grommet pack",
-    "dist": "cross-env NODE_ENV=production grommet pack"
+    "dist": "cross-env NODE_ENV=production grommet pack",
+    "test": "grommet check -t",
+    "test-update": "grommet check -t -- --updateSnapshot",
+    "test-watch": "grommet check -t -- --watchAll"
   },
   "dependencies": {
     "grommet": "https://github.com/grommet/grommet/tarball/NEXT-stable",

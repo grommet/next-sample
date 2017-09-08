@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import { getDocAsJSON } from 'react-desc';
+import PropTypes from 'prop-types';
 
 import { Box, Heading, Paragraph, RoutedButton } from 'grommet';
+import { hpe } from 'grommet/themes';
+
+const THEMES = {
+  grommet: undefined,
+  hpe,
+};
 
 export default class Props extends Component {
+  static contextTypes = {
+    currentTheme: PropTypes.string,
+    onThemeChange: PropTypes.func,
+    router: PropTypes.object,
+  };
   constructor(props) {
     super(props);
     this.state = getDocAsJSON(props.component);
@@ -20,8 +32,9 @@ export default class Props extends Component {
   }
 
   render() {
-    const { name, onTheme, theme, themes } = this.props;
+    const { name } = this.props;
     const { description, properties } = this.state;
+    const { currentTheme, onThemeChange } = this.context;
 
     const props = (properties || []).map(property => (
       <Box key={property.name}>
@@ -33,12 +46,12 @@ export default class Props extends Component {
       </Box>
     ));
 
-    const themeOptions = themes.map(t => <option key={t}>{t}</option>);
-    let homePath = '/';
-    if (theme) {
-      homePath += `?theme=${theme}`;
-    }
+    const themeOptions = Object.keys(THEMES).map(t => <option key={t}>{t}</option>);
 
+    let homePath = '/';
+    if (currentTheme) {
+      homePath = `/?theme=${currentTheme}`;
+    }
     return (
       <Box basis='medium' background='light-1'>
         <Box
@@ -47,7 +60,7 @@ export default class Props extends Component {
           justify='between'
           align='center'
         >
-          <RoutedButton path={homePath} plain={true} >
+          <RoutedButton path={homePath} plain={true}>
             <svg width='96px' height='96px' viewBox='0 0 96 96' version='1.1'>
               <g fill='none' fillRule='evenodd'>
                 <polygon
@@ -70,7 +83,7 @@ export default class Props extends Component {
         </Box>
         <Box margin='medium'>
           <Heading level={3}>Theme</Heading>
-          <select value={theme} onChange={event => onTheme(event.target.value)}>
+          <select value={currentTheme} onChange={event => onThemeChange(event.target.value)}>
             {themeOptions}
           </select>
         </Box>
