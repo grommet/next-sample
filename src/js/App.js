@@ -34,38 +34,40 @@ export default class App extends Component {
     currentTheme: PropTypes.string,
     onThemeChange: PropTypes.func,
   };
-  constructor(props, context) {
-    super(props, context);
-    this.onThemeChange = this.onThemeChange.bind(this);
-    this.state = {};
-    if (window.location.search) {
-      const params = new URLSearchParams(window.location.search);
-      this.state.theme = params.get('theme');
-    }
-  }
+
+  state = {
+    theme: undefined,
+  };
 
   getChildContext() {
-    const { theme } = this.state;
     return {
-      currentTheme: theme,
-      onThemeChange: this.onThemeChange,
+      currentTheme: this.state.theme,
+      onThemeChange: (...args) => this.onThemeChange(...args),
     };
   }
 
-  componentDidUpdate() {
-    const { theme } = this.state;
-    if (this.unlisten) {
+  componentDidMount() {
+    if (!this.unlisten) {
       this.unlisten = history.listen((location) => {
+        const { theme } = this.state;
         if (!location.search && theme && theme !== 'grommet') {
+          // this is to support routes without the theme as a url search param
           history.replace(`${window.location.pathname}?theme=${theme}`);
         }
       });
+    }
+    if (window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      /* eslint-disable react/no-did-mount-set-state */
+      this.setState({ theme: params.get('theme') });
+      /* eslint-enable react/no-did-mount-set-state */
     }
   }
 
   componentWillUnmount() {
     if (this.unlisten) {
       this.unlisten();
+      this.unlisten = undefined;
     }
   }
 
@@ -73,11 +75,10 @@ export default class App extends Component {
     let loc = window.location.pathname;
     if (theme !== 'grommet') {
       loc += `?theme=${theme}`;
-      this.setState({ theme });
+      this.setState({ theme }, () => history.replace(loc));
     } else {
-      this.setState({ theme: undefined });
+      this.setState({ theme: undefined }, () => history.replace(loc));
     }
-    history.replace(loc);
   }
 
   render() {

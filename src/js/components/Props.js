@@ -48,10 +48,6 @@ export default class Props extends Component {
 
     const themeOptions = Object.keys(THEMES).map(t => <option key={t}>{t}</option>);
 
-    let homePath = '/';
-    if (currentTheme) {
-      homePath = `/?theme=${currentTheme}`;
-    }
     return (
       <Box basis='medium' background='light-1'>
         <Box
@@ -60,7 +56,7 @@ export default class Props extends Component {
           justify='between'
           align='center'
         >
-          <RoutedButton path={homePath} plain={true}>
+          <RoutedButton path='/' plain={true}>
             <svg width='96px' height='96px' viewBox='0 0 96 96' version='1.1'>
               <g fill='none' fillRule='evenodd'>
                 <polygon

@@ -38,7 +38,7 @@ export default class LayerDoc extends Component {
         </Layer>
       );
     } else if (showFormLayer) {
-      const close = () => this.setState({ showFormLayer: false });
+      const close = () => this.setState({ showFormLayer: false, align: undefined });
       layerNode = (
         <Layer align={align} onEsc={close} size='medium'>
           <Box pad='xsmall' align='end'>
