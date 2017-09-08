@@ -20,21 +20,19 @@ class TextInputDoc extends Component {
       <Doc name='TextInput' component={TextInput}>
         <Box pad='large'>
           <Box margin='small'>
-            <TextInput id='item' name='item' />
+            <TextInput />
           </Box>
           <Box margin='small'>
-            <TextInput id='item2' name='item2' placeholder='placeholder' />
+            <TextInput placeholder='placeholder' />
           </Box>
           <Box margin='small'>
             <TextInput
-              id='item3'
-              name='item3'
               placeholder='suggestions'
               suggestions={suggestions}
               onSelect={
                 ({ suggestion }) => this.setState({ value: suggestion })
               }
-              onDOMChange={event => this.setState({
+              onInput={event => this.setState({
                 value: event.target.value,
                 suggestions: allSuggestions.filter(
                   suggestion => suggestion.indexOf(event.target.value) > -1
@@ -42,6 +40,24 @@ class TextInputDoc extends Component {
               })}
               value={value}
             />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='search' type='search' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='password' type='password' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='email' type='email' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='tel' type='tel' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='url' type='url' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='date' type='url' />
           </Box>
         </Box>
       </Doc>

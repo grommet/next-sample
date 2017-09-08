@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Box from './screens/Box';
 import Button from './screens/Button';
 import Chart from './screens/Chart';
+import Grid from './screens/Grid';
 import Heading from './screens/Heading';
 import Home from './screens/Home';
-import Grid from './screens/Grid';
+import Image from './screens/Image';
 import Layer from './screens/Layer';
 import Markdown from './screens/Markdown';
 import Meter from './screens/Meter';
@@ -24,8 +25,9 @@ export default class BasicApp extends Component {
           <Route exact={true} path='/box' component={Box} />
           <Route exact={true} path='/button' component={Button} />
           <Route exact={true} path='/chart' component={Chart} />
-          <Route exact={true} path='/heading' component={Heading} />
           <Route exact={true} path='/grid' component={Grid} />
+          <Route exact={true} path='/heading' component={Heading} />
+          <Route exact={true} path='/image' component={Image} />
           <Route exact={true} path='/layer' component={Layer} />
           <Route exact={true} path='/markdown' component={Markdown} />
           <Route exact={true} path='/meter' component={Meter} />

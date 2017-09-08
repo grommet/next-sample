@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import URLSearchParams from 'url-search-params';
 
 import {
-  Box, Button, Chart, Grid, Grommet, Heading, Markdown, Meter, Paragraph,
+  Box, Button, Chart, Grid, Grommet, Heading, Image, Markdown, Meter, Paragraph,
   RoutedButton, Stack, Text, TextInput,
 } from 'grommet';
 import { hpe } from 'grommet/themes';
@@ -161,6 +161,18 @@ export default class Home extends Component {
                       <Heading level={2} margin='small'>Stack</Heading>
                     </Box>
                   </Stack>
+                </RoutedButton>
+              </Box>
+            </Box>
+            <Box basis='medium'>
+              <Box margin='small'>
+                <RoutedButton path={`/image${suffix}`} plain={true}>
+                  <Box>
+                    <Image
+                      src='http://www.seafordcinema.org/wp-content/uploads/2016/11/hunt-for-the-wilderpeople-1.jpg'
+                    />
+                    <Text margin={{ horizontal: 'small' }}>Image</Text>
+                  </Box>
                 </RoutedButton>
               </Box>
             </Box>
