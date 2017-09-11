@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Button, Heading } from 'grommet';
 import doc from 'grommet/components/Button/doc';
 
-import { SocialFacebook } from 'grommet-icons';
+import { Facebook } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
@@ -32,7 +32,7 @@ export default () => (
         <Button label='Critical' critical={true} onClick={onClick} />
       </Box>
       <Box margin='small'>
-        <Button icon={<SocialFacebook color='plain' />} onClick={onClick} />
+        <Button icon={<Facebook color='plain' />} onClick={onClick} />
       </Box>
       <Box margin='small'>
         <Button
