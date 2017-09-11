@@ -59,6 +59,18 @@ class TextInputDoc extends Component {
           <Box margin='small'>
             <TextInput placeholder='date' type='url' />
           </Box>
+          <Box margin='small'>
+            <TextInput placeholder='small' size='small' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='large' size='large' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='xlarge' size='xlarge' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='plain' plain={true} />
+          </Box>
         </Box>
       </Doc>
     );
