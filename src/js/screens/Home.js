@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Box, Button, Chart, Grid, Heading, Image, Markdown, Meter, Paragraph,
+  Anchor, Box, Button, Chart, Grid, Heading, Image, Markdown, Meter, Paragraph,
   RoutedButton, Stack, Text, TextInput,
 } from 'grommet';
 
@@ -68,35 +68,44 @@ export default class Home extends Component {
             <RoutedButton path='/text' plain={true}>
               <Text>Text</Text>
             </RoutedButton>
-            <RoutedButton path='markdown' plain={true}>
+            <RoutedButton path='/markdown' plain={true}>
               <Markdown content='### Markdown' />
             </RoutedButton>
           </Box>
 
           <Box align='start' pad='small' basis='medium'>
-            <RoutedButton path='/button' label='Button' />
-            <Box margin={{ vertical: 'medium' }}>
+            <Box margin={{ bottom: 'small' }}>
+              <RoutedButton path='/button' label='Button' />
+            </Box>
+            <Box margin={{ vertical: 'small' }}>
+              <RoutedButton path='/anchor' plain={true}>
+                <Anchor tabIndex='-1' primary={true} label='Anchor' />
+              </RoutedButton>
+            </Box>
+            <Box margin={{ vertical: 'small' }}>
               <RoutedButton path='/text-input' plain={true}>
                 <TextInput placeholder='TextInput' disabled={true} />
               </RoutedButton>
             </Box>
-            <RoutedButton path='/layer'>
-              <Box direction='row'>
-                <Box
-                  background='dark-5'
-                  pad={{ horizontal: 'large', vertical: 'small' }}
-                >
-                  -
+            <Box margin={{ vertical: 'small' }}>
+              <RoutedButton path='/layer'>
+                <Box direction='row'>
+                  <Box
+                    background='dark-5'
+                    pad={{ horizontal: 'large', vertical: 'small' }}
+                  >
+                    -
+                  </Box>
+                  <Box
+                    border='all'
+                    basis='medium'
+                    pad={{ horizontal: 'medium', vertical: 'small' }}
+                  >
+                    Layer
+                  </Box>
                 </Box>
-                <Box
-                  border='all'
-                  basis='medium'
-                  pad={{ horizontal: 'medium', vertical: 'small' }}
-                >
-                  Layer
-                </Box>
-              </Box>
-            </RoutedButton>
+              </RoutedButton>
+            </Box>
           </Box>
 
           <Box basis='medium'>

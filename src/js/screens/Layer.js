@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Box, Button, Heading, Layer, Text, TextInput } from 'grommet';
 import doc from 'grommet/components/Layer/doc';
 
-import { CoreClose } from 'grommet-icons';
+import { Close } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
@@ -41,8 +41,8 @@ export default class LayerDoc extends Component {
       const close = () => this.setState({ showFormLayer: false, align: undefined });
       layerNode = (
         <Layer align={align} onEsc={close} size='medium'>
-          <Box pad='xsmall' align='end'>
-            <Button icon={<CoreClose />} onClick={close} />
+          <Box align='end'>
+            <Button icon={<Close />} onClick={close} />
           </Box>
           <Box pad='medium'>
             <Heading level={3} margin='none'>

@@ -8,6 +8,7 @@ import { createBrowserHistory } from 'history';
 import { Grommet } from 'grommet';
 import { hpe } from 'grommet/themes';
 
+import Anchor from './screens/Anchor';
 import Box from './screens/Box';
 import Button from './screens/Button';
 import Chart from './screens/Chart';
@@ -89,6 +90,7 @@ export default class App extends Component {
         <Grommet theme={theme ? THEMES[theme] : undefined}>
           <Switch>
             <Route exact={true} path='/' component={Home} />
+            <Route exact={true} path='/anchor' component={Anchor} />
             <Route exact={true} path='/box' component={Box} />
             <Route exact={true} path='/button' component={Button} />
             <Route exact={true} path='/chart' component={Chart} />
