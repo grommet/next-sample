@@ -2715,8 +2715,8 @@ grommet-icons@^0.4.0:
     styled-components "^2.1.2"
 
 "grommet-icons@https://github.com/grommet/grommet-icons/tarball/stable":
-  version "0.4.0"
-  resolved "https://github.com/grommet/grommet-icons/tarball/stable#50adf8792ee9c21ae43377283051fca44db4b7a9"
+  version "0.5.0"
+  resolved "https://github.com/grommet/grommet-icons/tarball/stable#71e961e2241d0d2cea777ae10c94ca0f68775fd3"
   dependencies:
     codeclimate-test-reporter "^0.5.0"
     deep-assign "^2.0.0"
@@ -4362,8 +4362,8 @@ p-locate@^2.0.0:
     p-limit "^1.1.0"
 
 p-map@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.1.1.tgz#05f5e4ae97a068371bc2a5cc86bfbdbc19c4ae7a"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
 
 pako@~0.2.0:
   version "0.2.9"
