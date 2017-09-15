@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Anchor, Box, Button, Chart, Grid, Heading, Image, Markdown, Meter, Paragraph,
+  Anchor, Box, Button, Chart, Grid, Heading, Image, Markdown, Menu, Meter, Paragraph,
   RoutedButton, Stack, Text, TextInput,
 } from 'grommet';
 
@@ -85,6 +85,15 @@ export default class Home extends Component {
             <Box margin={{ vertical: 'small' }}>
               <RoutedButton path='/text-input' plain={true}>
                 <TextInput placeholder='TextInput' disabled={true} />
+              </RoutedButton>
+            </Box>
+            <Box margin={{ vertical: 'small' }}>
+              <RoutedButton path='/menu' plain={true}>
+                <Menu
+                  tabIndex='-1'
+                  label='Menu'
+                  items={[]}
+                />
               </RoutedButton>
             </Box>
             <Box margin={{ vertical: 'small' }}>

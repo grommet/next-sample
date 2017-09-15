@@ -18,6 +18,7 @@ import Home from './screens/Home';
 import Image from './screens/Image';
 import Layer from './screens/Layer';
 import Markdown from './screens/Markdown';
+import Menu from './screens/Menu';
 import Meter from './screens/Meter';
 import Paragraph from './screens/Paragraph';
 import Stack from './screens/Stack';
@@ -99,6 +100,7 @@ export default class App extends Component {
             <Route exact={true} path='/grid' component={Grid} />
             <Route exact={true} path='/layer' component={Layer} />
             <Route exact={true} path='/markdown' component={Markdown} />
+            <Route exact={true} path='/menu' component={Menu} />
             <Route exact={true} path='/meter' component={Meter} />
             <Route exact={true} path='/paragraph' component={Paragraph} />
             <Route exact={true} path='/stack' component={Stack} />
