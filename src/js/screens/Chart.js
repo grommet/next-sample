@@ -10,14 +10,25 @@ doc(Chart);
 const BOUNDS = [[0, 7], [0, 100]];
 
 const VALUES = [
-  { value: [7, 90], label: 'ninety' },
+  { value: [7, 100], label: 'one hundred' },
   { value: [6, 70], label: 'seventy' },
   { value: [5, 60], label: 'sixty' },
   { value: [4, 80], label: 'eighty' },
   { value: [3, 40], label: 'forty' },
-  { value: [2, 30], label: 'thirty' },
-  { value: [1, 60], label: 'sixty' },
-  { value: [0, 0], label: 'zero' },
+  { value: [2, 0], label: 'zero' },
+  { value: [1, 30], label: 'thirty' },
+  { value: [0, 60], label: 'sixty' },
+];
+
+const VALUES2 = [
+  { value: [7, 0, 100], label: 'one hundred' },
+  { value: [6, 10, 70], label: 'seventy' },
+  { value: [5, 20, 60], label: 'sixty' },
+  { value: [4, 60, 80], label: 'eighty' },
+  { value: [3, 30, 40], label: 'forty' },
+  { value: [2, 0], label: 'zero' },
+  { value: [1, 10, 30], label: 'thirty' },
+  { value: [0, 20, 60], label: 'sixty' },
 ];
 
 const REVERSE_VALUES =
@@ -122,6 +133,22 @@ export default () => (
           <Text>then</Text>
           <Text>now</Text>
         </Box>
+      </Box>
+      <Box margin={{ vertical: 'medium' }}>
+        <Chart
+          bounds={BOUNDS}
+          values={VALUES2}
+          size={{ width: 'medium', height: 'xsmall' }}
+        />
+      </Box>
+      <Box margin={{ vertical: 'medium' }}>
+        <Chart
+          bounds={BOUNDS}
+          values={VALUES2}
+          size={{ width: 'medium', height: 'xsmall' }}
+          thickness='xsmall'
+          type='area'
+        />
       </Box>
     </Box>
   </Doc>
