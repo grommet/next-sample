@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Anchor, Box, Button, Chart, Grid, Heading, Image, Markdown, Menu, Meter, Paragraph,
-  RoutedButton, Stack, Text, TextInput,
+  Box, Button, Chart, Grid, Heading, Image, Markdown, Menu, Meter, Paragraph,
+  RoutedAnchor, RoutedButton, Stack, Text, TextInput, Video,
 } from 'grommet';
 
 const CHART_VALUES = [
@@ -78,9 +78,7 @@ export default class Home extends Component {
               <RoutedButton path='/button' label='Button' />
             </Box>
             <Box margin={{ vertical: 'small' }}>
-              <RoutedButton path='/anchor' plain={true}>
-                <Anchor tabIndex='-1' primary={true} label='Anchor' />
-              </RoutedButton>
+              <RoutedAnchor primary={true} path='/anchor' label='Anchor' />
             </Box>
             <Box margin={{ vertical: 'small' }}>
               <RoutedButton path='/text-input' plain={true}>
@@ -172,6 +170,18 @@ export default class Home extends Component {
                     />
                   </Box>
                   <Text margin={{ horizontal: 'small' }}>Image</Text>
+                </Box>
+              </RoutedButton>
+            </Box>
+            <Box margin='small'>
+              <RoutedButton path='/video' plain={true}>
+                <Box align='center'>
+                  <Box basis='small'>
+                    <Video fit='contain'>
+                      <source src='http://techslides.com/demos/sample-videos/small.mp4' type='video/mp4' />
+                    </Video>
+                  </Box>
+                  <Text margin={{ horizontal: 'small' }}>Video</Text>
                 </Box>
               </RoutedButton>
             </Box>
