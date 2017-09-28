@@ -8,10 +8,10 @@ export default class Doc extends Component {
     const { children, component, name } = this.props;
     return (
       <Box direction='row' full='grow'>
+        <Props name={name} component={component} />
         <Box flex='grow' direction='column'>
           {children}
         </Box>
-        <Props name={name} component={component} />
       </Box>
     );
   }

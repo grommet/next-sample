@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Box, Heading, Paragraph, RoutedButton } from 'grommet';
 import { hpe } from 'grommet/themes';
+import { LinkPrevious } from 'grommet-icons';
 
 const THEMES = {
   grommet: undefined,
@@ -55,18 +56,9 @@ export default class Props extends Component {
           direction='row'
           justify='between'
           align='center'
+          pad={{ horizontal: 'small' }}
         >
-          <RoutedButton path='/' plain={true}>
-            <svg width='96px' height='96px' viewBox='0 0 96 96' version='1.1'>
-              <g fill='none' fillRule='evenodd'>
-                <polygon
-                  stroke='#333333'
-                  strokeWidth='3'
-                  points='11.5 69 69 11.5 11.5 11.5'
-                />
-              </g>
-            </svg>
-          </RoutedButton>
+          <RoutedButton path='/' icon={<LinkPrevious size='large' />} />
           <Box direction='row' align='center' pad='medium'>
             <Heading margin='none'>{name}</Heading>
           </Box>
