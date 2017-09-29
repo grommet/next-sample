@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Anchor, Box, Button, Chart, Grid, Heading, Image, Markdown, Menu, Meter, Paragraph,
+  Anchor, Box, Button, Chart, CheckBox, Grid, Heading, Image, Markdown,
+  Menu, Meter, Paragraph,
   RoutedAnchor, RoutedButton, Stack, Text, TextInput, Video,
 } from 'grommet';
 
@@ -159,6 +160,9 @@ export default class Home extends Component {
             </Item>
             <Item path='/text-input'>
               <TextInput placeholder='TextInput' disabled={true} />
+            </Item>
+            <Item path='/check-box'>
+              <CheckBox label='CheckBox' disabled={true} />
             </Item>
           </Section>
 
