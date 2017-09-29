@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getDocAsJSON } from 'react-desc';
 import PropTypes from 'prop-types';
 
-import { Box, Heading, Paragraph, RoutedButton } from 'grommet';
+import { Box, Heading, Markdown, Paragraph, RoutedButton } from 'grommet';
 import { hpe } from 'grommet/themes';
 import { LinkPrevious } from 'grommet-icons';
 
@@ -17,9 +17,10 @@ export default class Props extends Component {
     onThemeChange: PropTypes.func,
     router: PropTypes.object,
   };
+
   constructor(props, context) {
     super(props, context);
-    this.state = getDocAsJSON(props.component);
+    this.state = props.component ? getDocAsJSON(props.component) : {};
   }
 
   renderValues(values) {
@@ -33,7 +34,7 @@ export default class Props extends Component {
   }
 
   render() {
-    const { name } = this.props;
+    const { name, text } = this.props;
     const { description, properties } = this.state;
     const { currentTheme, onThemeChange } = this.context;
 
@@ -64,6 +65,7 @@ export default class Props extends Component {
           </Box>
         </Box>
         <Box margin='medium'>
+          <Markdown content={text || ''} />
           <Paragraph>
             {description}
           </Paragraph>
