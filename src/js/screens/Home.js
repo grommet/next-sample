@@ -57,7 +57,6 @@ export default class Home extends Component {
           { name: 'main', start: [0, 1], end: [0, 1] },
         ]}
       >
-
         <Box
           gridArea='header'
           direction='row'

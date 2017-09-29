@@ -17,8 +17,8 @@ export default class Props extends Component {
     onThemeChange: PropTypes.func,
     router: PropTypes.object,
   };
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = getDocAsJSON(props.component);
   }
 
