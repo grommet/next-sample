@@ -5,10 +5,10 @@ import Props from './Props';
 
 export default class Doc extends Component {
   render() {
-    const { children, component, name } = this.props;
+    const { children, ...rest } = this.props;
     return (
       <Box direction='row' full='grow'>
-        <Props name={name} component={component} />
+        <Props {...rest} />
         <Box flex='grow' direction='column'>
           {children}
         </Box>

@@ -16,6 +16,7 @@ export default () => (
       <Text size='large'>Text Large</Text>
       <Text size='xlarge'>Text XLarge</Text>
       <Text size='xxlarge'>Text XXLarge</Text>
+      <Text color='status-critical'>status-critical</Text>
     </Box>
   </Doc>
 );

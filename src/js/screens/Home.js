@@ -163,6 +163,9 @@ export default class Home extends Component {
             <Item path='/check-box'>
               <CheckBox label='CheckBox' disabled={true} />
             </Item>
+            <Box margin={{ vertical: 'small' }}>
+              <RoutedAnchor path='/form' label='Form' />
+            </Box>
           </Section>
 
           <Section align='stretch' label='Visualizations'>
