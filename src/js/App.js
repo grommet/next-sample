@@ -12,6 +12,7 @@ import Anchor from './screens/Anchor';
 import Box from './screens/Box';
 import Button from './screens/Button';
 import Chart from './screens/Chart';
+import CheckBox from './screens/CheckBox';
 import Grid from './screens/Grid';
 import Heading from './screens/Heading';
 import Home from './screens/Home';
@@ -96,6 +97,7 @@ export default class App extends Component {
             <Route exact={true} path='/box' component={Box} />
             <Route exact={true} path='/button' component={Button} />
             <Route exact={true} path='/chart' component={Chart} />
+            <Route exact={true} path='/check-box' component={CheckBox} />
             <Route exact={true} path='/heading' component={Heading} />
             <Route exact={true} path='/image' component={Image} />
             <Route exact={true} path='/grid' component={Grid} />
