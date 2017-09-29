@@ -503,9 +503,9 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-grommet@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-grommet/-/babel-plugin-grommet-0.3.0.tgz#b0be36331ea839667b67e693484583591a11b051"
+babel-plugin-grommet@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-grommet/-/babel-plugin-grommet-0.4.0.tgz#a6ae18b0f46ac3b0428b1b527fe7215bf8b818e9"
   dependencies:
     babel-types "^6.25.0"
     find "^0.2.7"
