@@ -19,7 +19,7 @@ const CHART_VALUES = [
 ];
 
 const Section = ({ children, align, label }) => (
-  <Box align={align} margin='medium' basis='medium'>
+  <Box align={align} pad='medium' basis='medium'>
     <Heading level={2} margin={{ top: 'none' }}>
       <strong>{label.toUpperCase()}</strong>
     </Heading>
@@ -52,7 +52,7 @@ export default class Home extends Component {
     return (
       <Grid
         rows={['xsmall', 'flex']}
-        columns={['flex']}
+        columns={['full']}
         areas={[
           { name: 'header', start: [0, 0], end: [0, 0] },
           { name: 'main', start: [0, 1], end: [0, 1] },
