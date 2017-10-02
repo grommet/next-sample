@@ -2769,7 +2769,7 @@ grommet-icons@^0.10.0:
 
 "grommet-icons@https://github.com/grommet/grommet-icons/tarball/stable":
   version "0.10.1"
-  resolved "https://github.com/grommet/grommet-icons/tarball/stable#3a5a7461dc53ef55fcf28352a4c74cf1860a817d"
+  resolved "https://github.com/grommet/grommet-icons/tarball/stable#f3aa8ccdd992d6d7464e9b7bcd946e5cc4ea0630"
   dependencies:
     codeclimate-test-reporter "^0.5.0"
     deep-assign "^2.0.0"
