@@ -18,8 +18,16 @@ const CHART_VALUES = [
   { value: [0, 0], label: 'zero' },
 ];
 
-const Section = ({ children, align, label }) => (
-  <Box align={align} pad='medium' basis='medium'>
+const Section = ({ children, align, basis, index, label }) => (
+  <Box
+    align={align || 'start'}
+    pad='medium'
+    basis={basis || 'medium'}
+    animation={[
+      { type: 'zoomIn', duration: 800, delay: 100 + (200 * index) },
+      { type: 'fadeIn', duration: 500, delay: (200 * index) },
+    ]}
+  >
     <Heading level={2} margin={{ top: 'none' }}>
       <strong>{label.toUpperCase()}</strong>
     </Heading>
@@ -37,6 +45,7 @@ const Item = ({ children, path }) => (
 
 export default class Home extends Component {
   state = {}
+
   selectColor(color) {
     return (event) => {
       event.stopPropagation();
@@ -65,6 +74,7 @@ export default class Home extends Component {
           align='center'
           background='brand'
           pad={{ horizontal: 'medium' }}
+          animation='fadeIn'
         >
           <Heading margin='none'>Grommet 2.0</Heading>
           <Anchor
@@ -75,7 +85,7 @@ export default class Home extends Component {
 
         <Box gridArea='main' direction='row' wrap={true}>
 
-          <Section align='stretch' label='Layout'>
+          <Section align='stretch' label='Layout' index={0}>
             <Item path='/box'>
               <Box direction='row'>
                 <Box border={{ color: 'light-3' }} basis='medium' pad='medium'>
@@ -132,7 +142,7 @@ export default class Home extends Component {
             </Item>
           </Section>
 
-          <Section align='start' label='Text'>
+          <Section label='Text' index={1}>
             <Item path='/heading'>
               <Heading level={2} margin='none'>Heading</Heading>
             </Item>
@@ -147,7 +157,7 @@ export default class Home extends Component {
             </Item>
           </Section>
 
-          <Section align='start' label='Controls'>
+          <Section label='Controls' index={2}>
             <Box margin={{ vertical: 'small' }}>
               <RoutedButton path='/button' label='Button' />
             </Box>
@@ -168,7 +178,7 @@ export default class Home extends Component {
             </Box>
           </Section>
 
-          <Section align='stretch' label='Visualizations'>
+          <Section align='stretch' label='Visualizations' index={3}>
             <Item path='/meter'>
               <Stack anchor='top-right'>
                 <Meter
@@ -192,7 +202,7 @@ export default class Home extends Component {
             </Item>
           </Section>
 
-          <Section align='stretch' label='Media'>
+          <Section align='stretch' label='Media' index={4}>
             <Item path='/image'>
               <Box>
                 <Text margin='none'>Image</Text>
@@ -217,8 +227,7 @@ export default class Home extends Component {
             </Item>
           </Section>
 
-          <Box margin='medium' basis='full' pad={{ bottom: 'medium' }}>
-            <Heading level={2}><strong>COLOR</strong></Heading>
+          <Section basis='full' align='stretch' label='Color' index={5}>
             <Box
               direction='row'
               align='start'
@@ -241,7 +250,7 @@ export default class Home extends Component {
                 </Box>
               ))}
             </Box>
-          </Box>
+          </Section>
         </Box>
       </Grid>
     );

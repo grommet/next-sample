@@ -48,7 +48,7 @@ export default class Doc extends Component {
         );
       }
       examples = (
-        <Box flex='grow' direction='column'>
+        <Box flex='grow' direction='column' animation='fadeIn'>
           {closeControl}
           {children}
         </Box>

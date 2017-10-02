@@ -60,7 +60,14 @@ export default class Props extends Component {
     }
 
     return (
-      <Box basis='medium' background='light-1'>
+      <Box
+        basis='medium'
+        background='light-1'
+        animation={[
+          { type: 'fadeIn', delay: 200 },
+          { type: 'slideRight', delay: 300 },
+        ]}
+      >
         <Box
           direction='row'
           justify='between'
