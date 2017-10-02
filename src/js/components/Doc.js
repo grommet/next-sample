@@ -6,7 +6,7 @@ import Props from './Props';
 
 export default class Doc extends Component {
   state = {
-    narrow: false,
+    responsiveState: 'wide',
     showExamples: false,
   }
 
@@ -14,30 +14,30 @@ export default class Doc extends Component {
     window.scrollTo(0, 0);
   }
 
-  onNarrow = (narrow) => {
-    this.setState({ narrow });
+  onResponsiveChange = (responsiveState) => {
+    this.setState({ responsiveState });
   }
 
   render() {
     const { children, ...rest } = this.props;
-    const { narrow, showExamples } = this.state;
+    const { responsiveState, showExamples } = this.state;
 
     let props;
-    if (!narrow || !showExamples) {
+    if (responsiveState !== 'narrow' || !showExamples) {
       props = (
         <Props
           {...rest}
-          narrow={narrow}
-          onExamples={narrow ?
+          responsiveState={responsiveState}
+          onExamples={responsiveState === 'narrow' ?
             () => this.setState({ showExamples: true }) : undefined}
         />
       );
     }
 
     let examples;
-    if (!narrow || showExamples) {
+    if (responsiveState !== 'narrow' || showExamples) {
       let closeControl;
-      if (narrow) {
+      if (responsiveState === 'narrow') {
         closeControl = (
           <Box direction='row' justify='start' pad={{ horizontal: 'small' }}>
             <Button
@@ -56,7 +56,7 @@ export default class Doc extends Component {
     }
 
     return (
-      <Responsive onNarrow={this.onNarrow}>
+      <Responsive onChange={this.onResponsiveChange}>
         <Box direction='row'>
           {props}
           {examples}

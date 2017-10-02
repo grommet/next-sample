@@ -34,11 +34,11 @@ export default class Props extends Component {
   }
 
   render() {
-    const { name, narrow, onExamples, text } = this.props;
+    const { name, onExamples, responsiveState, text } = this.props;
     const { description, properties } = this.state;
     const { currentTheme, onThemeChange } = this.context;
 
-    const iconSize = (narrow ? undefined : 'large');
+    const iconSize = (responsiveState === 'narrow' ? undefined : 'large');
 
     const props = (properties || []).map(property => (
       <Box key={property.name}>
@@ -75,7 +75,7 @@ export default class Props extends Component {
             flex='shrink'
             basis='xsmall'
           >
-            <Heading margin='none' size={narrow ? 'small' : undefined}>
+            <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
               {name}
             </Heading>
           </Box>
