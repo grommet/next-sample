@@ -21,7 +21,7 @@ const CHART_VALUES = [
 const Section = ({ children, align, basis, index, label }) => (
   <Box
     align={align || 'start'}
-    margin='medium'
+    pad='medium'
     basis={basis || 'medium'}
     animation={[
       { type: 'zoomIn', duration: 800, delay: 100 + (200 * index) },
@@ -61,7 +61,7 @@ export default class Home extends Component {
     return (
       <Grid
         rows={['xsmall', 'flex']}
-        columns={['flex']}
+        columns={['full']}
         areas={[
           { name: 'header', start: [0, 0], end: [0, 0] },
           { name: 'main', start: [0, 1], end: [0, 1] },

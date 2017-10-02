@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { getDocAsJSON } from 'react-desc';
 import PropTypes from 'prop-types';
 
-import { Box, Heading, Markdown, Paragraph, RoutedButton } from 'grommet';
+import { Box, Button, Heading, Markdown, Paragraph, RoutedButton } from 'grommet';
 import { hpe } from 'grommet/themes';
-import { LinkPrevious } from 'grommet-icons';
+import { View, LinkPrevious } from 'grommet-icons';
 
 const THEMES = {
   grommet: undefined,
@@ -34,9 +34,11 @@ export default class Props extends Component {
   }
 
   render() {
-    const { name, text } = this.props;
+    const { name, onExamples, responsiveState, text } = this.props;
     const { description, properties } = this.state;
     const { currentTheme, onThemeChange } = this.context;
+
+    const iconSize = (responsiveState === 'narrow' ? undefined : 'large');
 
     const props = (properties || []).map(property => (
       <Box key={property.name}>
@@ -50,6 +52,13 @@ export default class Props extends Component {
 
     const themeOptions = Object.keys(THEMES).map(t => <option key={t}>{t}</option>);
 
+    let examplesControl;
+    if (onExamples) {
+      examplesControl = (
+        <Button icon={<View size={iconSize} />} onClick={onExamples} />
+      );
+    }
+
     return (
       <Box
         basis='medium'
@@ -60,18 +69,26 @@ export default class Props extends Component {
         ]}
       >
         <Box
-          basis='xsmall'
           direction='row'
           justify='between'
           align='center'
           pad={{ horizontal: 'small' }}
         >
-          <RoutedButton path='/' icon={<LinkPrevious size='large' />} />
-          <Box direction='row' align='center' pad='medium'>
-            <Heading margin='none'>{name}</Heading>
+          <RoutedButton path='/' icon={<LinkPrevious size={iconSize} />} />
+          <Box
+            direction='row'
+            align='center'
+            pad={{ horizontal: 'medium' }}
+            flex='shrink'
+            basis='xsmall'
+          >
+            <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
+              {name}
+            </Heading>
           </Box>
+          {examplesControl}
         </Box>
-        <Box margin='medium'>
+        <Box margin='medium' flex='grow'>
           <Markdown content={text || ''} />
           <Paragraph>
             {description}
