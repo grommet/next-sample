@@ -9,7 +9,7 @@ export default class Doc extends Component {
     return (
       <Box direction='row' full='grow'>
         <Props {...rest} />
-        <Box flex='grow' direction='column'>
+        <Box flex='grow' direction='column' animation='fadeIn'>
           {children}
         </Box>
       </Box>
