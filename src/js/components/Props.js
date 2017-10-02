@@ -51,7 +51,14 @@ export default class Props extends Component {
     const themeOptions = Object.keys(THEMES).map(t => <option key={t}>{t}</option>);
 
     return (
-      <Box basis='medium' background='light-1'>
+      <Box
+        basis='medium'
+        background='light-1'
+        animation={[
+          { type: 'fadeIn', delay: 200 },
+          { type: 'slideRight', delay: 300 },
+        ]}
+      >
         <Box
           basis='xsmall'
           direction='row'
