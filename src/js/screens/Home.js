@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {
   Anchor, Box, Button, Chart, CheckBox, Grid, Heading, Image, Markdown,
-  Menu, Meter, Paragraph,
+  Menu, Meter, Paragraph, RadioButton,
   RoutedAnchor, RoutedButton, Stack, Text, TextInput, Video,
 } from 'grommet';
 
@@ -172,6 +172,9 @@ export default class Home extends Component {
             </Item>
             <Item path='/check-box'>
               <CheckBox label='CheckBox' disabled={true} />
+            </Item>
+            <Item path='/radio-button'>
+              <RadioButton label='RadioButton' disabled={true} />
             </Item>
             <Box margin={{ vertical: 'small' }}>
               <RoutedAnchor path='/form' label='Form' />
