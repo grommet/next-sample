@@ -57,7 +57,13 @@ class TextInputDoc extends Component {
             <TextInput placeholder='url' type='url' />
           </Box>
           <Box margin='small'>
-            <TextInput placeholder='date' type='url' />
+            <TextInput placeholder='date' type='date' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='time' type='time' />
+          </Box>
+          <Box margin='small'>
+            <TextInput placeholder='number' type='number' />
           </Box>
           <Box margin='small'>
             <TextInput placeholder='small' size='small' />
