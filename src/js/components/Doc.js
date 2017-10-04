@@ -57,7 +57,7 @@ export default class Doc extends Component {
 
     return (
       <Responsive onChange={this.onResponsiveChange}>
-        <Box direction='row'>
+        <Box direction='row' full='grow'>
           {props}
           {examples}
         </Box>
