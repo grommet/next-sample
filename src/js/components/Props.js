@@ -75,17 +75,9 @@ export default class Props extends Component {
           pad={{ horizontal: 'small' }}
         >
           <RoutedButton path='/' icon={<LinkPrevious size={iconSize} />} />
-          <Box
-            direction='row'
-            align='center'
-            pad={{ horizontal: 'medium' }}
-            flex='shrink'
-            basis='xsmall'
-          >
-            <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
-              {name}
-            </Heading>
-          </Box>
+          <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
+            {name}
+          </Heading>
           {examplesControl}
         </Box>
         <Box margin='medium' flex='grow'>
