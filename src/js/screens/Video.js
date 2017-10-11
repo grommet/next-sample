@@ -6,15 +6,28 @@ import doc from 'grommet/components/Video/doc';
 
 import Doc from '../components/Doc';
 
-doc(Video);
+const desc = doc(Video).toJSON();
 
 const CONTENT = [
   <source key='video' src='/assets/small.mp4' type='video/mp4' />,
-  <track key='cc' label='English' kind='subtitles' srcLang='en' src='/assets/small-en.vtt' default={true} />,
+  <track
+    key='cc'
+    label='English'
+    kind='subtitles'
+    srcLang='en'
+    src='/assets/small-en.vtt'
+    default={true}
+  />,
 ];
 
 const CONTENT2 = [...CONTENT,
-  <track key='cc2' label='French' kind='subtitles' srcLang='fr' src='/assets/small-fr.vtt' />,
+  <track
+    key='cc2'
+    label='French'
+    kind='subtitles'
+    srcLang='fr'
+    src='/assets/small-fr.vtt'
+  />,
 ];
 
 class Stacked extends Component {
@@ -82,7 +95,7 @@ class Stacked extends Component {
 }
 
 export default () => (
-  <Doc name='Video' component={Video}>
+  <Doc name='Video' desc={desc}>
     <Box pad='large'>
       <Heading level={2} textAlign='center'>Controls below</Heading>
       <Box align='center' margin={{ vertical: 'medium' }}>

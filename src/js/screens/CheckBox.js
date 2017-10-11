@@ -5,10 +5,10 @@ import doc from 'grommet/components/CheckBox/doc';
 
 import Doc from '../components/Doc';
 
-doc(CheckBox);
+const desc = doc(CheckBox).toJSON();
 
 export default () => (
-  <Doc name='CheckBox' component={CheckBox}>
+  <Doc name='CheckBox' desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <CheckBox label='default' onChange={() => {}} />

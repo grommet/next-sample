@@ -5,7 +5,7 @@ import doc from 'grommet/components/Meter/doc';
 
 import Doc from '../components/Doc';
 
-doc(Meter);
+const desc = doc(Meter).toJSON();
 
 const SINGLE_VALUE = [
   { value: 60, label: 'sixty', onClick: () => alert('60') },
@@ -35,13 +35,13 @@ export default class MeterDoc extends Component {
     const highlightValue =
       (multipleValues.filter(v => v.highlight)[0] || { value: 100 });
     return (
-      <Doc name='Meter' component={Meter}>
+      <Doc name='Meter' desc={desc}>
         <Box pad='large'>
           <Box margin={{ vertical: 'medium' }}>
-            <Meter values={SINGLE_VALUE} />
+            <Meter values={SINGLE_VALUE} aria-label='Single value meter' />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
-            <Meter values={multipleValues} />
+            <Meter values={multipleValues} aria-label='Multiple value meter' />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
@@ -49,6 +49,7 @@ export default class MeterDoc extends Component {
               size='xsmall'
               thickness='xsmall'
               values={multipleValues}
+              aria-label='Extra small multiple value meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -57,6 +58,7 @@ export default class MeterDoc extends Component {
               size='small'
               thickness='small'
               values={multipleValues}
+              aria-label='Small multiple value meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -65,6 +67,7 @@ export default class MeterDoc extends Component {
               size='large'
               thickness='large'
               values={multipleValues}
+              aria-label='Large multiple value meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -73,21 +76,24 @@ export default class MeterDoc extends Component {
               size='xlarge'
               thickness='xlarge'
               values={multipleValues}
+              aria-label='Extra large multiple value meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               size='full'
               values={multipleValues}
+              aria-label='Full width value meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
-            <Meter type='circle' values={SINGLE_VALUE} />
+            <Meter type='circle' values={SINGLE_VALUE} aria-label='Circle meter' />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
             <Meter
               type='circle'
               values={multipleValues}
+              aria-label='Multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -95,6 +101,7 @@ export default class MeterDoc extends Component {
               type='circle'
               round={true}
               values={multipleValues}
+              aria-label='Rounded multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -104,6 +111,7 @@ export default class MeterDoc extends Component {
               size='xsmall'
               thickness='xsmall'
               values={multipleValues}
+              aria-label='Extra small rounded multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -113,6 +121,7 @@ export default class MeterDoc extends Component {
               size='small'
               thickness='small'
               values={multipleValues}
+              aria-label='Small rounded multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -122,6 +131,7 @@ export default class MeterDoc extends Component {
               size='large'
               thickness='large'
               values={multipleValues}
+              aria-label='Large rounded multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -131,6 +141,7 @@ export default class MeterDoc extends Component {
               size='xlarge'
               thickness='xlarge'
               values={multipleValues}
+              aria-label='Extra large rounded multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }}>
@@ -139,6 +150,7 @@ export default class MeterDoc extends Component {
               round={true}
               size='full'
               values={multipleValues}
+              aria-label='Full width multiple value circle meter'
             />
           </Box>
           <Box margin={{ vertical: 'medium' }} alignSelf='start'>
@@ -148,6 +160,7 @@ export default class MeterDoc extends Component {
                 round={true}
                 size='medium'
                 values={multipleValues}
+                aria-label='Multipel value circle meter'
               />
               <Box
                 justify='center'

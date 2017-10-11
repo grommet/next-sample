@@ -7,7 +7,7 @@ import { Close } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
-doc(Layer);
+const desc = doc(Layer).toJSON();
 
 export default class LayerDoc extends Component {
   state = {
@@ -56,7 +56,7 @@ export default class LayerDoc extends Component {
       );
     }
     return (
-      <Doc name='Layer' component={Layer}>
+      <Doc name='Layer' desc={desc}>
         <Box pad='large' align='start'>
           <Box margin='small'>
             <Button

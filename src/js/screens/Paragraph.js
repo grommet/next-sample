@@ -5,7 +5,7 @@ import doc from 'grommet/components/Paragraph/doc';
 
 import Doc from '../components/Doc';
 
-doc(Paragraph);
+const desc = doc(Paragraph).toJSON();
 
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -15,7 +15,7 @@ esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export default () => (
-  <Doc name='Paragraph' component={Paragraph}>
+  <Doc name='Paragraph' desc={desc}>
     <Box pad='large'>
       <Paragraph><strong>Default</strong> {LOREM_IPSUM}</Paragraph>
       <Paragraph size='large'><strong>Large</strong> {LOREM_IPSUM}</Paragraph>

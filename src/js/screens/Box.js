@@ -5,10 +5,10 @@ import doc from 'grommet/components/Box/doc';
 
 import Doc from '../components/Doc';
 
-doc(Box);
+const desc = doc(Box).toJSON();
 
 export default () => (
-  <Doc name='Box' component={Box}>
+  <Doc name='Box' desc={desc}>
     <Box pad='large' background='neutral-1'>
       <Box pad='medium'>Plain sub-box</Box>
       <Box pad='medium' background='light-2'>Background color</Box>

@@ -24,8 +24,8 @@ const Section = ({ children, align, basis, index, label }) => (
     pad='medium'
     basis={basis || 'medium'}
     animation={[
-      { type: 'zoomIn', duration: 800, delay: 100 + (200 * index) },
-      { type: 'fadeIn', duration: 500, delay: (200 * index) },
+      { type: 'zoomIn', duration: 500, delay: 100 + (100 * index) },
+      { type: 'fadeIn', duration: 500, delay: (100 * index) },
     ]}
   >
     <Heading level={2} margin={{ top: 'none' }}>
@@ -185,7 +185,7 @@ export default class Home extends Component {
             <Item path='/meter'>
               <Stack anchor='top-right'>
                 <Meter
-                  title='Meter example'
+                  aria-label='Meter example'
                   values={[{ value: 60, label: 'sixty' }]}
                 />
                 <Text margin={{ horizontal: 'small' }}>Meter</Text>
@@ -195,7 +195,7 @@ export default class Home extends Component {
             <Item path='/chart'>
               <Stack anchor='top-left'>
                 <Chart
-                  title='Chart example'
+                  aria-label='Chart example'
                   bounds={[[0, 7], [0, 100]]}
                   size={{ width: 'medium', height: 'xsmall' }}
                   values={CHART_VALUES}
@@ -212,7 +212,7 @@ export default class Home extends Component {
                 <Box basis='xsmall'>
                   <Image
                     fit='contain'
-                    src='http://www.seafordcinema.org/wp-content/uploads/2016/11/hunt-for-the-wilderpeople-1.jpg'
+                    src='/assets/Wilderpeople_Ricky.jpg'
                   />
                 </Box>
               </Box>
@@ -223,7 +223,7 @@ export default class Home extends Component {
                 <Text margin='none'>Video</Text>
                 <Box basis='xsmall'>
                   <Video fit='contain'>
-                    <source src='http://techslides.com/demos/sample-videos/small.mp4' type='video/mp4' />
+                    <source src='/assets/small.mp4' type='video/mp4' />
                   </Video>
                 </Box>
               </Box>

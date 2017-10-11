@@ -5,10 +5,10 @@ import doc from 'grommet/components/Text/doc';
 
 import Doc from '../components/Doc';
 
-doc(Text);
+const desc = doc(Text).toJSON();
 
 export default () => (
-  <Doc name='Text' component={Text}>
+  <Doc name='Text' desc={desc}>
     <Box pad='large'>
       <Text size='xsmall'>Text XSmall</Text>
       <Text size='small'>Text Small</Text>

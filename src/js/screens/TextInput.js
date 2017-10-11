@@ -5,7 +5,7 @@ import doc from 'grommet/components/TextInput/doc';
 
 import Doc from '../components/Doc';
 
-doc(TextInput);
+const desc = doc(TextInput).toJSON();
 
 const allSuggestions = ['alan', 'bryan', 'chris', 'david', 'eric', 'tracy'];
 
@@ -17,7 +17,7 @@ class TextInputDoc extends Component {
   render() {
     const { suggestions, value } = this.state;
     return (
-      <Doc name='TextInput' component={TextInput}>
+      <Doc name='TextInput' desc={desc}>
         <Box pad='large'>
           <Box margin='small'>
             <TextInput />

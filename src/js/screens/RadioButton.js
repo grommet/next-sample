@@ -5,10 +5,10 @@ import doc from 'grommet/components/RadioButton/doc';
 
 import Doc from '../components/Doc';
 
-doc(RadioButton);
+const desc = doc(RadioButton).toJSON();
 
 export default () => (
-  <Doc name='RadioButton' component={RadioButton}>
+  <Doc name='RadioButton' desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <RadioButton label='default' onChange={() => {}} />
