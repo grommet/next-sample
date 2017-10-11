@@ -7,7 +7,7 @@ import { Edit } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
-doc(Anchor);
+const desc = doc(Anchor).toJSON();
 
 function onClick(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ function onClick(event) {
 }
 
 export default () => (
-  <Doc name='Anchor' component={Anchor}>
+  <Doc name='Anchor' desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <Anchor href='#' onClick={onClick}>

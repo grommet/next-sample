@@ -5,12 +5,12 @@ import doc from 'grommet/components/Image/doc';
 
 import Doc from '../components/Doc';
 
-doc(Image);
+const desc = doc(Image).toJSON();
 
-const SRC = 'http://www.seafordcinema.org/wp-content/uploads/2016/11/hunt-for-the-wilderpeople-1.jpg';
+const SRC = '/assets/Wilderpeople_Ricky.jpg';
 
 export default () => (
-  <Doc name='Image' component={Image}>
+  <Doc name='Image' desc={desc}>
     <Box pad='large'>
       <Box border='all' align='center'>
         <Image src={SRC} />

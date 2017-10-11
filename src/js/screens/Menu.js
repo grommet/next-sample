@@ -7,7 +7,7 @@ import { CaretDown, More } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
-doc(Menu);
+const desc = doc(Menu).toJSON();
 
 function onClick(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ function onClick(event) {
 }
 
 export default () => (
-  <Doc name='Menu' component={Menu}>
+  <Doc name='Menu' desc={desc}>
     <Box pad='large'>
       <Box direction='row' wrap={true} align='center'>
         <Box margin='small'>

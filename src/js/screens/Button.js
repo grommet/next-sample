@@ -7,14 +7,14 @@ import { Facebook } from 'grommet-icons';
 
 import Doc from '../components/Doc';
 
-doc(Button);
+const desc = doc(Button).toJSON();
 
 function onClick() {
   alert('hi');
 }
 
 export default () => (
-  <Doc name='Button' component={Button}>
+  <Doc name='Button' desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <Button label='Default' onClick={onClick} />

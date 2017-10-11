@@ -5,7 +5,7 @@ import doc from 'grommet/components/Chart/doc';
 
 import Doc from '../components/Doc';
 
-doc(Chart);
+const desc = doc(Chart).toJSON();
 
 const BOUNDS = [[0, 7], [0, 100]];
 
@@ -35,13 +35,14 @@ const REVERSE_VALUES =
   VALUES.map((v, i) => ({ ...v, value: [i, v.value[1]] }));
 
 export default () => (
-  <Doc name='Chart' component={Chart}>
+  <Doc name='Chart' desc={desc}>
     <Box pad='large'>
       <Box margin={{ vertical: 'medium' }}>
         <Chart
           bounds={BOUNDS}
           values={VALUES}
           size={{ width: 'medium', height: 'xsmall' }}
+          aria-label='Bar chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -50,6 +51,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'medium', height: 'xsmall' }}
           type='line'
+          aria-label='Line chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -58,6 +60,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'medium', height: 'xsmall' }}
           type='area'
+          aria-label='Area chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -66,6 +69,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'medium', height: 'xsmall' }}
           round={true}
+          aria-label='Rounded bar chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -75,6 +79,7 @@ export default () => (
           size={{ width: 'medium', height: 'xsmall' }}
           type='line'
           round={true}
+          aria-label='Rounded line chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -84,6 +89,7 @@ export default () => (
           size={{ width: 'medium', height: 'xsmall' }}
           type='area'
           round={true}
+          aria-label='Rounded area chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -92,6 +98,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'xsmall', height: 'xxsmall' }}
           thickness='xsmall'
+          aria-label='Extra small bar chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -100,6 +107,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'small', height: 'xxsmall' }}
           thickness='small'
+          aria-label='Small bar chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -108,6 +116,7 @@ export default () => (
           values={VALUES}
           size={{ width: 'xlarge', height: 'medium' }}
           thickness='xlarge'
+          aria-label='Extra large bar chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }} alignSelf='start'>
@@ -118,6 +127,7 @@ export default () => (
             size={{ width: 'medium', height: 'xsmall' }}
             type='area'
             round={true}
+            aria-label='Rounded area chart'
           />
           <Chart
             bounds={BOUNDS}
@@ -127,6 +137,7 @@ export default () => (
             type='line'
             round={true}
             thickness='small'
+            aria-label='Small rounded line chart'
           />
         </Stack>
         <Box direction='row' responsive={false} justify='between'>
@@ -139,6 +150,7 @@ export default () => (
           bounds={BOUNDS}
           values={VALUES2}
           size={{ width: 'medium', height: 'xsmall' }}
+          aria-label='Small rounded line chart'
         />
       </Box>
       <Box margin={{ vertical: 'medium' }}>
@@ -148,6 +160,7 @@ export default () => (
           size={{ width: 'medium', height: 'xsmall' }}
           thickness='xsmall'
           type='area'
+          aria-label='Extra small ranged area chart'
         />
       </Box>
     </Box>

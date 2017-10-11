@@ -5,7 +5,7 @@ import doc from 'grommet/components/Markdown/doc';
 
 import Doc from '../components/Doc';
 
-doc(Markdown);
+const desc = doc(Markdown).toJSON();
 
 const CONTENT = `
 # Heading 1
@@ -20,7 +20,7 @@ Paragraph
 `;
 
 export default () => (
-  <Doc name='Markdown' component={Markdown}>
+  <Doc name='Markdown' desc={desc}>
     <Box pad={{ horizontal: 'large' }}>
       <Markdown content={CONTENT} />
     </Box>

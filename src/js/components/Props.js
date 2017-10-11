@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { getDocAsJSON } from 'react-desc';
 import PropTypes from 'prop-types';
 
-import { Box, Button, Heading, Markdown, Paragraph, RoutedButton } from 'grommet';
+import { Box, Button, Heading, Markdown, Paragraph, RoutedButton, Text } from 'grommet';
 import { hpe } from 'grommet/themes';
 import { View, LinkPrevious } from 'grommet-icons';
 
@@ -18,24 +17,14 @@ export default class Props extends Component {
     router: PropTypes.object,
   };
 
-  constructor(props, context) {
-    super(props, context);
-    this.state = props.component ? getDocAsJSON(props.component) : {};
-  }
-
-  renderValues(values) {
-    let result;
-    if (Array.isArray(values)) {
-      result = values.map(v => this.renderValues(v));
-    } else {
-      result = <span key={values}>{values}</span>;
-    }
-    return result;
+  static defaultProps = {
+    desc: {},
   }
 
   render() {
-    const { name, onExamples, responsiveState, text } = this.props;
-    const { description, properties } = this.state;
+    const {
+      desc: { description, properties }, name, onExamples, responsiveState, text,
+    } = this.props;
     const { currentTheme, onThemeChange } = this.context;
 
     const iconSize = (responsiveState === 'narrow' ? undefined : 'large');
@@ -46,7 +35,7 @@ export default class Props extends Component {
           <strong>{property.name}</strong>
         </Heading>
         <Paragraph>{property.description}</Paragraph>
-        {this.renderValues(property.format)}
+        <Text><pre>{property.format}</pre></Text>
       </Box>
     ));
 
@@ -64,8 +53,8 @@ export default class Props extends Component {
         basis='medium'
         background='light-1'
         animation={[
-          { type: 'fadeIn', delay: 200 },
-          { type: 'slideRight', delay: 300 },
+          { type: 'fadeIn', delay: 100 },
+          { type: 'slideRight', delay: 200 },
         ]}
       >
         <Box
@@ -75,9 +64,11 @@ export default class Props extends Component {
           pad={{ horizontal: 'small' }}
         >
           <RoutedButton path='/' icon={<LinkPrevious size={iconSize} />} />
-          <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
-            {name}
-          </Heading>
+          <Box margin={{ horizontal: 'small' }}>
+            <Heading margin='none' size={responsiveState === 'narrow' ? 'small' : undefined}>
+              {name}
+            </Heading>
+          </Box>
           {examplesControl}
         </Box>
         <Box margin='medium' flex='grow'>
