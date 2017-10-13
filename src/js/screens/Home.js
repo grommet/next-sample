@@ -7,6 +7,8 @@ import {
   RoutedAnchor, RoutedButton, Stack, Text, TextInput, Video,
 } from 'grommet';
 
+import { Actions } from 'grommet-icons';
+
 const CHART_VALUES = [
   { value: [7, 90], label: 'ninety' },
   { value: [6, 80], label: 'eighty' },
@@ -166,6 +168,12 @@ export default class Home extends Component {
             </Box>
             <Item path='/menu'>
               <Menu tabIndex='-1' label='Menu' items={[]} />
+            </Item>
+            <Item path='/drop-button'>
+              <Box direction='row' align='center'>
+                <Box margin={{ right: 'small' }}>Drop Button</Box>
+                <Actions color='brand' />
+              </Box>
             </Item>
             <Item path='/text-input'>
               <TextInput placeholder='TextInput' disabled={true} />
