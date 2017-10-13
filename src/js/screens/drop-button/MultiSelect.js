@@ -16,12 +16,16 @@ function debounce(cb, timer) {
 
 export default class MultiSelect extends Component {
   static defaultProps = {
+    basis: undefined,
+    children: undefined,
     search: '',
     onClose: undefined,
     onSearch: undefined,
   }
   static propTypes = {
+    basis: PropTypes.string,
     category: PropTypes.string.isRequired,
+    children: PropTypes.func,
     items: PropTypes.array.isRequired,
     onClose: PropTypes.func,
     onSearch: PropTypes.func,
@@ -38,11 +42,14 @@ export default class MultiSelect extends Component {
   }
 
   componentDidMount() {
-    // timeout need to send the operation through event loop and allow time to the portal
-    // to be available
-    setTimeout(() => {
-      findDOMNode(this.searchRef).querySelector('input').focus();
-    }, 0);
+    const { onSearch } = this.props;
+    if (onSearch) {
+      // timeout need to send the operation through event loop and allow time to the portal
+      // to be available
+      setTimeout(() => {
+        findDOMNode(this.searchRef).querySelector('input').focus();
+      }, 0);
+    }
   }
 
   componentDidUpdate() {
@@ -93,7 +100,7 @@ export default class MultiSelect extends Component {
   }
 
   render() {
-    const { category, onClose, items, onSearch, onKeyDown } = this.props;
+    const { basis, category, children, onClose, items, onSearch, onKeyDown } = this.props;
     const { activeItemIndex, search } = this.state;
     return (
       <Keyboard
@@ -108,8 +115,8 @@ export default class MultiSelect extends Component {
             pad='xsmall'
             direction='row'
             tag='header'
-            background='light-2'
             justify='between'
+            border='bottom'
           >
             <Text size='small' margin={{ horizontal: 'xsmall' }}>
               <strong>{`Select ${category}`}</strong>
@@ -133,22 +140,32 @@ export default class MultiSelect extends Component {
               />
             </Box>
           ) : undefined}
-          <Box basis='small' overflow='auto'>
-            <Box flex={false}>
-              {items.map((item, index) => (
-                <Button
-                  ref={(ref) => { this.itemsRef[index] = ref; }}
-                  active={activeItemIndex === index}
-                  key={item}
-                  onClick={() => this.selectItem(item)}
-                  hoverIndicator='background'
-                >
-                  <Box align='start' pad='small'>
-                    <Text margin='none'>{item}</Text>
-                  </Box>
-                </Button>
-              ))}
-            </Box>
+          <Box basis={basis} overflow='auto'>
+            {items.length ? (
+              <Box flex={false}>
+                {items.map((item, index) => (
+                  <Button
+                    ref={(ref) => { this.itemsRef[index] = ref; }}
+                    active={activeItemIndex === index}
+                    key={`item_${category}_${index}`}
+                    onClick={() => this.selectItem(item)}
+                    hoverIndicator='background'
+                  >
+                    {children ? children(item, index) : (
+                      <Box align='start' pad='small'>
+                        <Text margin='none'>{item}</Text>
+                      </Box>
+                    )}
+                  </Button>
+                ))}
+              </Box>
+            ) : (
+              <Box flex={true} align='center' justify='center' pad='small'>
+                <Text textAlign='center'>
+                  No {category} available
+                </Text>
+              </Box>
+            )}
           </Box>
         </Box>
       </Keyboard>
