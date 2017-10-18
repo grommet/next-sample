@@ -4,7 +4,7 @@ import { Anchor, Box, Button, DropButton, Heading, Text } from 'grommet';
 import { FormAdd, FormClose } from 'grommet-icons';
 
 import MultiSelect from './MultiSelect';
-import airlines from './airlines';
+import airlines from '../data/airlines';
 
 export default class AirlineMultiSelect extends Component {
   state = {

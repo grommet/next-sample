@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Anchor, Box, Button, Chart, CheckBox, Grid, Heading, Image, Markdown,
   Menu, Meter, Paragraph, RadioButton,
-  RoutedAnchor, RoutedButton, Stack, Text, TextInput, Video,
+  RoutedAnchor, RoutedButton, Select, Stack, Text, TextInput, Video,
 } from 'grommet';
 
 import { Actions } from 'grommet-icons';
@@ -168,6 +168,9 @@ export default class Home extends Component {
             </Box>
             <Item path='/menu'>
               <Menu tabIndex='-1' label='Menu' items={[]} />
+            </Item>
+            <Item path='/select'>
+              <Select options={[]} placeholder='Select' tabIndex='-1' />
             </Item>
             <Item path='/drop-button'>
               <Box direction='row' align='center'>

@@ -144,7 +144,6 @@ export default class LabelMultiSelect extends Component {
     return (
       <Box basis='small'>
         <DropButton
-          background='white'
           a11yTitle='Open Labels drop'
           open={open}
           onClose={this.close}
@@ -156,6 +155,7 @@ export default class LabelMultiSelect extends Component {
           }
         >
           <MultiSelect
+            background='white'
             category='Label'
             onClose={this.close}
             items={available}

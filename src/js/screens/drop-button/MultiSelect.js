@@ -100,7 +100,16 @@ export default class MultiSelect extends Component {
   }
 
   render() {
-    const { basis, category, children, onClose, items, onSearch, onKeyDown } = this.props;
+    const {
+      background,
+      basis,
+      category,
+      children,
+      onClose,
+      items,
+      onSearch,
+      onKeyDown,
+    } = this.props;
     const { activeItemIndex, search } = this.state;
     return (
       <Keyboard
@@ -109,7 +118,7 @@ export default class MultiSelect extends Component {
         onDown={this.onNextItem}
         onKeyDown={onKeyDown}
       >
-        <Box>
+        <Box background={background}>
           <Box
             align='center'
             pad='xsmall'
@@ -130,8 +139,10 @@ export default class MultiSelect extends Component {
             ) : undefined}
           </Box>
           {onSearch ? (
-            <Box pad='small' border='bottom'>
+            <Box border='bottom'>
               <TextInput
+                focus={true}
+                plain={true}
                 ref={(ref) => { this.searchRef = ref; }}
                 type='search'
                 value={search}

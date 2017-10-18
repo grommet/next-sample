@@ -77,6 +77,9 @@ class TextInputDoc extends Component {
           <Box margin='small'>
             <TextInput placeholder='plain' plain={true} />
           </Box>
+          <Box margin='small'>
+            <TextInput placeholder='plain with focus' plain={true} focus={true} />
+          </Box>
         </Box>
       </Doc>
     );

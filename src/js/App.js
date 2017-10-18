@@ -25,6 +25,7 @@ import Menu from './screens/Menu';
 import Meter from './screens/Meter';
 import Paragraph from './screens/Paragraph';
 import RadioButton from './screens/RadioButton';
+import Select from './screens/Select';
 import Stack from './screens/Stack';
 import Text from './screens/Text';
 import TextInput from './screens/TextInput';
@@ -112,6 +113,7 @@ export default class App extends Component {
             <Route exact={true} path='/meter' component={Meter} />
             <Route exact={true} path='/radio-button' component={RadioButton} />
             <Route exact={true} path='/paragraph' component={Paragraph} />
+            <Route exact={true} path='/select' component={Select} />
             <Route exact={true} path='/stack' component={Stack} />
             <Route exact={true} path='/text' component={Text} />
             <Route exact={true} path='/text-input' component={TextInput} />

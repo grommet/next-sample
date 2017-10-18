@@ -61,7 +61,7 @@ export default class LayerDoc extends Component {
           <Box margin='small'>
             <Button
               label='Confirm center'
-              onClick={() => this.setState({ showConfirmLayer: true })}
+              onClick={() => this.setState({ showConfirmLayer: true, align: undefined })}
               primary={true}
             />
           </Box>
