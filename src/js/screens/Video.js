@@ -95,7 +95,7 @@ class Stacked extends Component {
 }
 
 export default () => (
-  <Doc name='Video' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Heading level={2} textAlign='center'>Controls below</Heading>
       <Box align='center' margin={{ vertical: 'medium' }}>

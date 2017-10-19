@@ -15,7 +15,7 @@ function onClick(event) {
 }
 
 export default () => (
-  <Doc name='Anchor' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <Anchor href='#' onClick={onClick}>

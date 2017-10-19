@@ -8,7 +8,7 @@ import Doc from '../components/Doc';
 const desc = doc(Text).toJSON();
 
 export default () => (
-  <Doc name='Text' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Text size='xsmall'>Text XSmall</Text>
       <Text size='small'>Text Small</Text>

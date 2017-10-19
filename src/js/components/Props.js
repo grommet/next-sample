@@ -10,6 +10,12 @@ const THEMES = {
   hpe,
 };
 
+function getDefaultProp(defaultProp) {
+  const defaultPropString = typeof defaultProp === 'object' ?
+    JSON.stringify(defaultProp, undefined, 2) : defaultProp;
+
+  return [' Defaults to ', <code key='t'>{defaultPropString}</code>, '.'];
+}
 export default class Props extends Component {
   static contextTypes = {
     currentTheme: PropTypes.string,
@@ -23,7 +29,7 @@ export default class Props extends Component {
 
   render() {
     const {
-      desc: { description, properties }, name, onExamples, responsiveState, text,
+      desc: { description, name, properties }, onExamples, responsiveState, text,
     } = this.props;
     const { currentTheme, onThemeChange } = this.context;
 
@@ -34,7 +40,11 @@ export default class Props extends Component {
         <Heading level={3} size='small'>
           <strong>{property.name}</strong>
         </Heading>
-        <Paragraph>{property.description}</Paragraph>
+        <Paragraph>
+          {property.required ? 'Required. ' : ''}
+          {property.description}
+          {property.defaultProp ? getDefaultProp(property.defaultProp) : ''}
+        </Paragraph>
         <Text><pre>{property.format}</pre></Text>
       </Box>
     ));

@@ -35,7 +35,7 @@ export default class MeterDoc extends Component {
     const highlightValue =
       (multipleValues.filter(v => v.highlight)[0] || { value: 100 });
     return (
-      <Doc name='Meter' desc={desc}>
+      <Doc desc={desc}>
         <Box pad='large'>
           <Box margin={{ vertical: 'medium' }}>
             <Meter values={SINGLE_VALUE} aria-label='Single value meter' />

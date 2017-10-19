@@ -20,7 +20,7 @@ Paragraph
 `;
 
 export default () => (
-  <Doc name='Markdown' desc={desc}>
+  <Doc desc={desc}>
     <Box pad={{ horizontal: 'large' }}>
       <Markdown content={CONTENT} />
     </Box>

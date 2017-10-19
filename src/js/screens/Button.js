@@ -14,7 +14,7 @@ function onClick() {
 }
 
 export default () => (
-  <Doc name='Button' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <Button label='Default' onClick={onClick} />

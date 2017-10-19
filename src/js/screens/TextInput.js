@@ -17,7 +17,7 @@ class TextInputDoc extends Component {
   render() {
     const { suggestions, value } = this.state;
     return (
-      <Doc name='TextInput' desc={desc}>
+      <Doc desc={desc}>
         <Box pad='large'>
           <Box margin='small'>
             <TextInput />

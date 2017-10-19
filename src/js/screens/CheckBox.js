@@ -8,7 +8,7 @@ import Doc from '../components/Doc';
 const desc = doc(CheckBox).toJSON();
 
 export default () => (
-  <Doc name='CheckBox' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large' align='start'>
       <Box margin='small'>
         <CheckBox label='default' onChange={() => {}} />

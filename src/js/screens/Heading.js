@@ -8,7 +8,7 @@ import Doc from '../components/Doc';
 const desc = doc(Heading).toJSON();
 
 export default () => (
-  <Doc name='Heading' desc={desc}>
+  <Doc desc={desc}>
     <Box pad={{ horizontal: 'large' }}>
       <Heading level={1}>Heading 1</Heading>
       <Heading level={2}>Heading 2</Heading>

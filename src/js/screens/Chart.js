@@ -35,7 +35,7 @@ const REVERSE_VALUES =
   VALUES.map((v, i) => ({ ...v, value: [i, v.value[1]] }));
 
 export default () => (
-  <Doc name='Chart' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Box margin={{ vertical: 'medium' }}>
         <Chart

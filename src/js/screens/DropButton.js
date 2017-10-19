@@ -12,7 +12,7 @@ const desc = doc(DropButton).toJSON();
 export default class DropButtonDoc extends Component {
   render() {
     return (
-      <Doc name='DropButton' desc={desc}>
+      <Doc desc={desc}>
         <Box pad='large'>
           <Box direction='row'>
             <AirlineMultiSelect />

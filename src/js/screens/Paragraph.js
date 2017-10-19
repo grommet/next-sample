@@ -15,7 +15,7 @@ esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export default () => (
-  <Doc name='Paragraph' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Paragraph><strong>Default</strong> {LOREM_IPSUM}</Paragraph>
       <Paragraph size='large'><strong>Large</strong> {LOREM_IPSUM}</Paragraph>

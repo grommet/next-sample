@@ -8,7 +8,7 @@ import Doc from '../components/Doc';
 const desc = doc(Grid).toJSON();
 
 export default () => (
-  <Doc name='Grid' desc={desc}>
+  <Doc desc={desc}>
     <Grid
       rows={['xxsmall', 'medium', 'xsmall']}
       columns={['3/4', '1/4']}

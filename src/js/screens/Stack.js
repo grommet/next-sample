@@ -8,7 +8,7 @@ import Doc from '../components/Doc';
 const desc = doc(Stack).toJSON();
 
 export default () => (
-  <Doc name='Stack' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Stack>
         <Box pad='large' background='light-2'>

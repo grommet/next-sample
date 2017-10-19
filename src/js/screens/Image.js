@@ -10,7 +10,7 @@ const desc = doc(Image).toJSON();
 const SRC = '/assets/Wilderpeople_Ricky.jpg';
 
 export default () => (
-  <Doc name='Image' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Box border='all' align='center'>
         <Image src={SRC} />

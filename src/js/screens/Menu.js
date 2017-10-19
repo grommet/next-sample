@@ -15,7 +15,7 @@ function onClick(event) {
 }
 
 export default () => (
-  <Doc name='Menu' desc={desc}>
+  <Doc desc={desc}>
     <Box pad='large'>
       <Box direction='row' wrap={true} align='center'>
         <Box margin='small'>

@@ -56,7 +56,7 @@ export default class LayerDoc extends Component {
       );
     }
     return (
-      <Doc name='Layer' desc={desc}>
+      <Doc desc={desc}>
         <Box pad='large' align='start'>
           <Box margin='small'>
             <Button
